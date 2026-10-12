@@ -1,6 +1,5 @@
 import io
 import os
-import textwrap
 import zipfile
 from fastapi import FastAPI
 from fastapi.responses import Response, StreamingResponse
@@ -11,29 +10,70 @@ app = FastAPI()
 CANVAS_SIZE = (1080, 1080)
 BG_COLOR = (0, 0, 0)
 TEXT_COLOR = (255, 255, 255)
+SUBTEXT_COLOR = (215, 215, 215)
+MAX_TEXT_WIDTH = 900  # Leaves 90px margin on each side
 
-# Load fonts from repo folder, falling back to default if absent
+# Directory for custom fonts
 FONT_DIR = os.path.join(os.path.dirname(__file__), "fonts")
-try:
-    font_rating = ImageFont.truetype(os.path.join(FONT_DIR, "Arial.ttf"), 36)
-    font_author = ImageFont.truetype(os.path.join(FONT_DIR, "Arial.ttf"), 34)
-    font_quote = ImageFont.truetype(os.path.join(FONT_DIR, "Arial.ttf"), 38)
-    font_footer = ImageFont.truetype(os.path.join(FONT_DIR, "Arial-Bold.ttf"), 46)
-except Exception:
-    font_rating = font_author = font_quote = font_footer = ImageFont.load_default()
 
-# Load logo
+def get_font(font_name: str, size: int):
+    # Try custom folder, system fonts, or fallback
+    paths = [
+        os.path.join(FONT_DIR, font_name),
+        font_name,
+        "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
+        "/usr/share/fonts/truetype/liberation/LiberationSans-Regular.ttf",
+    ]
+    for p in paths:
+        if os.path.exists(p):
+            try:
+                return ImageFont.truetype(p, size)
+            except Exception:
+                pass
+    try:
+        return ImageFont.truetype("Arial.ttf", size)
+    except Exception:
+        return ImageFont.load_default()
+
+# Base fonts
+font_rating = get_font("Arial-Bold.ttf", 46)
+font_author = get_font("Arial.ttf", 36)
+font_footer = get_font("Arial-Bold.ttf", 50)
+
+# Load Logo
 LOGO_PATH = os.path.join(os.path.dirname(__file__), "logowhite.png")
 logo_img = None
 if os.path.exists(LOGO_PATH):
     raw_logo = Image.open(LOGO_PATH).convert("RGBA")
-    target_width = 460
+    target_width = 560  # Increased from 460 for prominent branding
     scale = target_width / raw_logo.width
     target_height = int(raw_logo.height * scale)
     logo_img = raw_logo.resize((target_width, target_height), Image.Resampling.LANCZOS)
 
-# Apollo Protocol Review Dataset
-reviews = [
+# Wrap text strictly by pixel boundary
+def wrap_text_pixels(text: str, font: ImageFont.ImageFont, max_width: int, draw: ImageDraw.ImageDraw):
+    words = text.split()
+    lines = []
+    current_line = []
+    for word in words:
+        test_line = " ".join(current_line + [word])
+        bbox = draw.textbbox((0, 0), test_line, font=font)
+        line_w = bbox[2] - bbox[0]
+        if line_w <= max_width:
+            current_line.append(word)
+        else:
+            if current_line:
+                lines.append(" ".join(current_line))
+                current_line = [word]
+            else:
+                lines.append(word)
+                current_line = []
+    if current_line:
+        lines.append(" ".join(current_line))
+    return lines
+
+# Complete Apollo Protocol Review Dataset (1 to 100)
+REVIEWS = [
     {
         "num": 1,
         "author": "Marcus R. — Verified Buyer",
@@ -640,49 +680,91 @@ def render_ad_image(item: dict) -> Image.Image:
     canvas = Image.new("RGB", CANVAS_SIZE, BG_COLOR)
     draw = ImageDraw.Draw(canvas)
 
-    # 1. Logo
-    current_y = 70
+    # 1. Place Logo
+    current_y = 60
     if logo_img:
         logo_x = (CANVAS_SIZE[0] - logo_img.width) // 2
         canvas.paste(logo_img, (logo_x, current_y), logo_img)
-        current_y += logo_img.height + 40
+        current_y += logo_img.height + 30
     else:
-        current_y += 100
+        current_y += 120
 
-    # 2. Rating
+    # 2. Rating & Stars
     rating_text = item["rating"]
     r_bbox = draw.textbbox((0, 0), rating_text, font=font_rating)
-    draw.text(((CANVAS_SIZE[0] - (r_bbox[2] - r_bbox[0])) // 2, current_y), rating_text, fill=TEXT_COLOR, font=font_rating)
-    current_y += (r_bbox[3] - r_bbox[1]) + 20
+    r_w = r_bbox[2] - r_bbox[0]
+    draw.text(((CANVAS_SIZE[0] - r_w) // 2, current_y), rating_text, fill=TEXT_COLOR, font=font_rating)
+    current_y += (r_bbox[3] - r_bbox[1]) + 16
 
     # 3. Author
     author_text = item["author"]
     a_bbox = draw.textbbox((0, 0), author_text, font=font_author)
-    draw.text(((CANVAS_SIZE[0] - (a_bbox[2] - a_bbox[0])) // 2, current_y), author_text, fill=(220, 220, 220), font=font_author)
-    current_y += (a_bbox[3] - a_bbox[1]) + 45
+    a_w = a_bbox[2] - a_bbox[0]
+    draw.text(((CANVAS_SIZE[0] - a_w) // 2, current_y), author_text, fill=SUBTEXT_COLOR, font=font_author)
+    current_y += (a_bbox[3] - a_bbox[1]) + 35
 
-    # 4. Formatted Quote
-    wrapped_lines = textwrap.wrap(f'“{item["quote"]}”', width=38)
-    for line in wrapped_lines:
-        line_bbox = draw.textbbox((0, 0), line, font=font_quote)
-        draw.text(((CANVAS_SIZE[0] - (line_bbox[2] - line_bbox[0])) // 2, current_y), line, fill=TEXT_COLOR, font=font_quote)
-        current_y += (line_bbox[3] - line_bbox[1]) + 18
+    # 4. Dynamic Quote Sizing
+    # Target available vertical area between header and footer
+    footer_top_y = 960
+    available_height = footer_top_y - current_y - 40
+    
+    # Try large sizes first (54px down to 44px) so text commands the screen
+    quote_text = f'“{item["quote"]}”'
+    chosen_font = None
+    chosen_lines = []
+    line_spacing = 20
 
-    # 5. Footer URL
+    for test_size in [54, 50, 46, 42]:
+        test_font = get_font("Arial.ttf", test_size)
+        lines = wrap_text_pixels(quote_text, test_font, MAX_TEXT_WIDTH, draw)
+        line_height = draw.textbbox((0, 0), "Ay", font=test_font)[3]
+        total_text_h = len(lines) * (line_height + line_spacing)
+        if total_text_h <= available_height or test_size == 42:
+            chosen_font = test_font
+            chosen_lines = lines
+            break
+
+    # Center the quote vertically in the remaining space
+    line_h = draw.textbbox((0, 0), "Ay", font=chosen_font)[3]
+    total_quote_h = len(chosen_lines) * (line_h + line_spacing)
+    start_quote_y = current_y + (available_height - total_quote_h) // 2
+
+    for line in chosen_lines:
+        line_bbox = draw.textbbox((0, 0), line, font=chosen_font)
+        line_w = line_bbox[2] - line_bbox[0]
+        draw.text(((CANVAS_SIZE[0] - line_w) // 2, start_quote_y), line, fill=TEXT_COLOR, font=chosen_font)
+        start_quote_y += line_h + line_spacing
+
+    # 5. Footer URL (Pinned prominently at bottom)
     footer_text = "VanguardBIO.ai"
     f_bbox = draw.textbbox((0, 0), footer_text, font=font_footer)
-    draw.text(((CANVAS_SIZE[0] - (f_bbox[2] - f_bbox[0])) // 2, 970), footer_text, fill=TEXT_COLOR, font=font_footer)
+    f_w = f_bbox[2] - f_bbox[0]
+    draw.text(((CANVAS_SIZE[0] - f_w) // 2, 970), footer_text, fill=TEXT_COLOR, font=font_footer)
 
     return canvas
 
 @app.get("/")
-def home():
-    return {"status": "ready", "download_url": "/generate-zip"}
+def index():
+    return {
+        "service": "VanguardBIO Apollo Ad Batch Generator",
+        "total_reviews": len(REVIEWS),
+        "preview_one": "/preview/1",
+        "download_all_zip": "/generate-zip"
+    }
+
+@app.get("/preview/{review_num}")
+def preview_single(review_num: int):
+    review = next((r for r in REVIEWS if r["num"] == review_num), None)
+    if not review:
+        return Response(content="Review not found", status_code=404)
+    img = render_ad_image(review)
+    buf = io.BytesIO()
+    img.save(buf, format="PNG", dpi=(72, 72))
+    return Response(content=buf.getvalue(), media_type="image/png")
 
 @app.get("/generate-zip")
 def generate_zip():
     zip_buffer = io.BytesIO()
-
     with zipfile.ZipFile(zip_buffer, mode="w", compression=zipfile.ZIP_DEFLATED) as zf:
         for item in REVIEWS:
             img = render_ad_image(item)
@@ -695,5 +777,5 @@ def generate_zip():
     return StreamingResponse(
         zip_buffer,
         media_type="application/zip",
-        headers={"Content-Disposition": "attachment; filename=apollo_ads_batch.zip"}
+        headers={"Content-Disposition": "attachment; filename=apollo_protocol_100_ads.zip"}
     )
