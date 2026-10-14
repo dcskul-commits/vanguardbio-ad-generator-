@@ -72,7 +72,7 @@ def wrap_text_pixels(text: str, font: ImageFont.ImageFont, max_width: int, draw:
         lines.append(" ".join(current_line))
     return lines
 
-# Complete Apollo Protocol Review Dataset (1 to 100)
+# Complete Zeus Protocol Review Dataset (1 to 129)
 REVIEWS = [
     {
         "num": 1,
@@ -920,7 +920,7 @@ def render_ad_image(item: dict) -> Image.Image:
 @app.get("/")
 def index():
     return {
-        "service": "VanguardBIO Apollo Ad Batch Generator",
+        "service": "VanguardBIO Zeus Ad Batch Generator",
         "total_reviews": len(REVIEWS),
         "preview_one": "/preview/1",
         "download_all_zip": "/generate-zip"
@@ -945,11 +945,11 @@ def generate_zip():
             img_io = io.BytesIO()
             img.save(img_io, format="PNG", dpi=(72, 72))
             img_io.seek(0)
-            zf.writestr(f"apollo_ad_{item['num']:03d}.png", img_io.read())
+            zf.writestr(f"zeus_ad_{item['num']:03d}.png", img_io.read())
 
     zip_buffer.seek(0)
     return StreamingResponse(
         zip_buffer,
         media_type="application/zip",
-        headers={"Content-Disposition": "attachment; filename=apollo_protocol_100_ads.zip"}
+        headers={"Content-Disposition": "attachment; filename=zeus_protocol_100_ads.zip"}
     )
