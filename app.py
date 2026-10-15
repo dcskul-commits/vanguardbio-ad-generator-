@@ -58,6 +58,30 @@ def wrap_text_pixels(text: str, font: ImageFont.ImageFont, max_width: int, draw:
     for word in words:
         test_line = " ".join(current_line + [word])
         bbox = draw.textbbox((0, 0), test_line, font=font)
+
+# Base fonts
+font_rating = get_font("Arial-Bold.ttf", 46)
+font_author = get_font("Arial.ttf", 36)
+font_footer = get_font("Arial-Bold.ttf", 50)
+
+# Load Logo
+LOGO_PATH = os.path.join(os.path.dirname(__file__), "logowhite.png")
+logo_img = None
+if os.path.exists(LOGO_PATH):
+    raw_logo = Image.open(LOGO_PATH).convert("RGBA")
+    target_width = 560  # Increased from 460 for prominent branding
+    scale = target_width / raw_logo.width
+    target_height = int(raw_logo.height * scale)
+    logo_img = raw_logo.resize((target_width, target_height), Image.Resampling.LANCZOS)
+
+# Wrap text strictly by pixel boundary
+def wrap_text_pixels(text: str, font: ImageFont.ImageFont, max_width: int, draw: ImageDraw.ImageDraw):
+    words = text.split()
+    lines = []
+    current_line = []
+    for word in words:
+        test_line = " ".join(current_line + [word])
+        bbox = draw.textbbox((0, 0), test_line, font=font)
         line_w = bbox[2] - bbox[0]
         if line_w <= max_width:
             current_line.append(word)
