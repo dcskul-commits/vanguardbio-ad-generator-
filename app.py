@@ -96,907 +96,907 @@ def wrap_text_pixels(text: str, font: ImageFont.ImageFont, max_width: int, draw:
         lines.append(" ".join(current_line))
     return lines
 
-# Complete achilles Protocol Review Dataset (1 to 129)
+# Complete Athena Protocol Review Dataset (1 to 129)
 REVIEWS = [
     {
         "num": 1,
-        "author": "Marcus T. — Verified Buyer",
+        "author": "Elena V. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Chronic shoulder impingement resolved in 4 weeks. I’ve dealt with rotator cuff inflammation for over three years. Adding the Achilles protocol took my joint mobility from restricted to full range of motion by week four. The HGH and TB-500 combination accelerated my tissue repair noticeably."
+        "quote": "The Athena Protocol completely transformed my skin luminosity and texture within three weeks. The combination of Glutathione and GHK-Cu gave me a radiant glow that my dermatologist couldn't stop asking about."
     },
     {
         "num": 2,
-        "author": "Julian R. — Verified Buyer",
+        "author": "Sophia R. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "The Achilles Protocol completely transformed my recovery metrics. Sleep architecture improved dramatically within the first ten days, and my tendonitis flare-ups after heavy pulling sessions disappeared entirely. Seamless telehealth onboarding and professional-grade packaging."
+        "quote": "NAD+ infusions paired with the copper peptide completely reset my energy levels and smoothed out fine lines around my eyes. Absolute game-changer for women over 40."
     },
     {
         "num": 3,
-        "author": "Dr. Ethan K. — Verified Buyer",
+        "author": "Dr. Claire M. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "As someone who evaluates protocols professionally, the precision of the peptide stack here is exceptional. Rapid muscle recovery and a noticeable drop in systemic inflammation markers by week six. Highly recommend for high-performance physical optimization."
+        "quote": "From a clinical standpoint, the multi-vector formulation in the Athena stack is brilliant. Dermal density and skin elasticity improved measurably on ultrasound by week six."
     },
     {
         "num": 4,
-        "author": "Damon W. — Verified Buyer",
-        "rating": "★★★★☆ (4.8 / 5)",
-        "quote": "Remarkable body recomposition and accelerated healing from a lingering knee issue. The documentation and protocol clarity made self-administration straightforward. Noticeable gains in overall joint resilience and sustained daily energy."
+        "author": "Chloe S. — Verified Buyer",
+        "rating": "★★★★☆ (4.9 / 5)",
+        "quote": "Incredible results on skin radiance and overall vitality. The Melanotan II component provided a gorgeous, even glow without harsh sun exposure."
     },
     {
         "num": 5,
-        "author": "Lucas V. — Verified Buyer",
+        "author": "Victoria L. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Retatrutide combined with HGH is an absolute game-changer. Stripped stubborn visceral fat while packing on clean mass. DEXA scan at week 8 showed a massive shift in my body fat percentage."
+        "quote": "My hair density and skin firmness have never looked better. VanguardBIO delivers true pharmaceutical-grade anti-aging results."
     },
     {
         "num": 6,
-        "author": "Brandon C. — Verified Buyer",
+        "author": "Hannah B. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "The inclusion of KPV cleared up digestive issues I've battled for years. Better nutrient absorption has directly improved my training output and daily vitality."
+        "quote": "Deep sleep quality skyrocketed thanks to the HGH and NAD+ synergy. I wake up looking and feeling fully refreshed every single morning."
     },
     {
         "num": 7,
-        "author": "Garrett M. — Verified Buyer",
+        "author": "Jessica T. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "TB-500 worked wonders on my chronic elbow pain. Back to pressing heavy without any nagging discomfort. The 503B pharmacy quality gives complete peace of mind."
+        "quote": "The tele-health onboarding was seamless, and the protocol documentation made self-administration effortless. Worth every single dollar."
     },
     {
         "num": 8,
-        "author": "Spencer H. — Verified Buyer",
-        "rating": "★★★★☆ (4.9 / 5)",
-        "quote": "Deep sleep quality skyrocketed in week one thanks to the HGH component. Waking up fully rested and ready to attack heavy compound lifts."
+        "author": "Rachel K. — Verified Buyer",
+        "rating": "★★★★☆ (4.8 / 5)",
+        "quote": "Noticeable tightening of skin tone and a dramatic reduction in oxidative stress fatigue. Truly feels like a fountain of youth stack."
     },
     {
         "num": 9,
-        "author": "Travis L. — Verified Buyer",
+        "author": "Natalie P. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Unreal metabolic shift. Retatrutide curbs appetite effortlessly while keeping energy levels completely stable throughout intense training blocks."
+        "quote": "GHK-Cu is magic for skin elasticity. My friends keep asking what facial treatments I've been doing—it's all thanks to Athena."
     },
     {
         "num": 10,
-        "author": "Nate P. — Verified Buyer",
+        "author": "Samantha W. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "The entire onboarding and health expert review process was seamless. The Achilles stack is built for serious lifters who don't want to compromise."
+        "quote": "Crystal-clear protocol guidance, rapid shipping, and pristine 503B compounding quality. Exceptional experience."
     },
     {
         "num": 11,
-        "author": "Derek B. — Verified Buyer",
+        "author": "Lauren H. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Noticed a substantial reduction in systemic inflammation markers by week six. My joints feel lubricated and resilient even after brutal leg days."
+        "quote": "Glutathione cleared up my skin tone completely. The oxidative glow is real and sustainable."
     },
     {
         "num": 12,
-        "author": "Kyle S. — Verified Buyer",
-        "rating": "★★★★☆ (4.8 / 5)",
-        "quote": "Cleanest physical recomposition stack I've ever run. Lean mass went up while waistline dropped steadily month over month."
+        "author": "Megan D. — Verified Buyer",
+        "rating": "★★★★☆ (4.9 / 5)",
+        "quote": "Solid body composition changes alongside remarkable anti-aging skin improvements. Exceptional stack for women."
     },
     {
         "num": 13,
-        "author": "Zachary M. — Verified Buyer",
+        "author": "Amanda C. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Professional packaging, rapid delivery, and crystal-clear protocol documentation. VanguardBIO sets the gold standard for peptide therapeutics."
+        "quote": "TB-500 keeps my joint mobility and skin tissue resilient against everyday stress. Complete cellular rejuvenation."
     },
     {
         "num": 14,
-        "author": "Evan T. — Verified Buyer",
+        "author": "Brittany N. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "My recovery time between heavy squat sessions was cut in half. The synergistic effect of HGH and TB-500 is palpable."
+        "quote": "My biological age markers on my tracking dashboard dropped significantly over 8 weeks. Unbelievable science."
     },
     {
         "num": 15,
-        "author": "Logan K. — Verified Buyer",
+        "author": "Taylor F. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Gut health was always my bottleneck. KPV completely resolved my post-meal bloating and enhanced my overall nutrient partitioning."
+        "quote": "The combination of NAD+ and Glutathione gave me boundless daily energy while clearing my skin entirely."
     },
     {
         "num": 16,
-        "author": "Caleb J. — Verified Buyer",
-        "rating": "★★★★☆ (4.9 / 5)",
-        "quote": "Exceptional results on body fat loss. Retatrutide is lightyears ahead of older generation compounds."
+        "author": "Ashley M. — Verified Buyer",
+        "rating": "★★★★☆ (4.8 / 5)",
+        "quote": "A premium investment in longevity and appearance. The results speak for themselves on every mirror check."
     },
     {
         "num": 17,
-        "author": "Tyler R. — Verified Buyer",
+        "author": "Danielle R. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "At 46 years old, this protocol brought back my physical capacity from a decade ago. Energy, recovery, and body composition are all dialed in."
+        "quote": "Fine lines around my mouth and forehead have visibly softened. GHK-Cu is an absolute miracle worker."
     },
     {
         "num": 18,
-        "author": "Austin F. — Verified Buyer",
+        "author": "Nicole G. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "The third-party HPLC testing reports gave me total confidence before starting. Results on bloodwork and body composition have been stellar."
+        "quote": "Professional packaging, precise dosing instructions, and outstanding customer care from VanguardBIO."
     },
     {
         "num": 19,
-        "author": "Cole H. — Verified Buyer",
+        "author": "Amber J. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Zero joint creakiness left in my knees. TB-500 and HGH are an unstoppable recovery pairing for heavy athletes."
+        "quote": "Melanotan II gave me a beautiful, sun-kissed photoprotective glow without any UV damage or burning."
     },
     {
         "num": 20,
-        "author": "Jared D. — Verified Buyer",
-        "rating": "★★★★☆ (4.8 / 5)",
-        "quote": "A bit of an investment, but the return on physical performance and body composition makes every dollar worth it."
+        "author": "Stephanie K. — Verified Buyer",
+        "rating": "★★★★☆ (4.9 / 5)",
+        "quote": "Body tone and skin luminosity improved in tandem. Very happy with the monthly auto-refill schedule."
     },
     {
         "num": 21,
-        "author": "Blake W. — Verified Buyer",
+        "author": "Kayla B. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "The multi-vector approach of Achilles covers every base: growth, repair, gut health, and fat loss. Absolute masterclass in stack design."
+        "quote": "My recovery from workouts is faster and my skin texture is tighter. The Athena Protocol covers every base."
     },
     {
         "num": 22,
-        "author": "Sean M. — Verified Buyer",
+        "author": "Alexis W. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Rapid delivery right to my doorstep and automated refills mean I never miss a dose. Fantastic customer support and clinical oversight."
+        "quote": "Cellular energy and skin clarity both reached all-time highs. Highly recommend to any woman serious about longevity."
     },
     {
         "num": 23,
-        "author": "Trevor P. — Verified Buyer",
+        "author": "Morgan T. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "My IGF-1 levels moved right into the optimal anabolic window. Lean mass gains have been steady and clean."
+        "quote": "The 503B pharmacy compounding standard gives total peace of mind. Purity and efficacy are unmatched."
     },
     {
         "num": 24,
-        "author": "Brody L. — Verified Buyer",
-        "rating": "★★★★☆ (4.9 / 5)",
-        "quote": "Noticeably faster healing on soft tissue niggles. I used to nurse pulled hamstrings for weeks; now turnaround time is minimal."
+        "author": "Brianna S. — Verified Buyer",
+        "rating": "★★★★☆ (4.8 / 5)",
+        "quote": "Noticeable reduction in skin dullness and improved sleep architecture within the first ten days."
     },
     {
         "num": 25,
-        "author": "Gavin N. — Verified Buyer",
+        "author": "Jasmine L. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Retatrutide keeps cravings completely silent. Combined with HGH, my physique has leaned out dramatically without sacrificing strength."
+        "quote": "HGH and GHK-Cu working together restored my youthful skin bounce. Truly remarkable biohacking."
     },
     {
         "num": 26,
-        "author": "Seth B. — Verified Buyer",
+        "author": "Courtney P. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "KPV transformed my gut integrity. Digestion is smoother and my overall systemic inflammation plummeted."
+        "quote": "Systemic inflammation markers dropped, and my complexion looks clearer than it did in my twenties."
     },
     {
         "num": 27,
-        "author": "Chase V. — Verified Buyer",
+        "author": "Paige D. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "The protocol documentation is thorough, professional, and easy to execute. High-tier service from VanguardBIO."
+        "quote": "Comprehensive health expert oversight during onboarding ensured my protocol was custom-tailored."
     },
     {
         "num": 28,
-        "author": "Wyatt C. — Verified Buyer",
-        "rating": "★★★★☆ (4.8 / 5)",
-        "quote": "Solid protocol for dedicated guys looking to bypass normal aging plateaus. Great results on my 60-day blood panel."
+        "author": "Sydney V. — Verified Buyer",
+        "rating": "★★★★☆ (4.9 / 5)",
+        "quote": "Fantastic results on skin thickness and hair follicle vitality. Worth every penny."
     },
     {
         "num": 29,
-        "author": "Ryder K. — Verified Buyer",
+        "author": "Brooke M. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Shoulder tendonitis that lingered for two years finally cleared up entirely. TB-500 is magic."
+        "quote": "NAD+ repletion completely eliminated my afternoon brain fog. Sharp focus all day long."
     },
     {
         "num": 30,
-        "author": "Miles J. — Verified Buyer",
+        "author": "Kaitlyn R. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Sleep scores on my wearable device jumped instantly. Deep sleep duration doubled within the first fortnight."
+        "quote": "The master antioxidant blend in Athena keeps my skin luminous even through stressful work weeks."
     },
     {
         "num": 31,
-        "author": "Grant S. — Verified Buyer",
+        "author": "Allison C. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "The 503B pharmacy compounding standard is evident from the first unboxing. Pure pharmaceutical grade excellence."
+        "quote": "Dermal density ultrasound scans showed incredible collagen synthesis after just two months."
     },
     {
         "num": 32,
-        "author": "Finn R. — Verified Buyer",
-        "rating": "★★★★☆ (4.9 / 5)",
-        "quote": "Incredible fat loss around the midsection while maintaining full strength on my deadlifts. Retatrutide is unmatched."
+        "author": "Jenna K. — Verified Buyer",
+        "rating": "★★★★☆ (4.8 / 5)",
+        "quote": "Smooth delivery, beautiful packaging, and high-end clinical documentation."
     },
     {
         "num": 33,
-        "author": "Declan M. — Verified Buyer",
+        "author": "Whitney B. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Telehealth consultation was quick, professional, and thorough. The expert tailored my titration schedule perfectly."
+        "quote": "Skin elasticity and overall muscle tone improved dramatically. Flawless formulation."
     },
     {
         "num": 34,
-        "author": "Kade T. — Verified Buyer",
+        "author": "Savannah T. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "My recovery ceiling has doubled. I can train harder, more frequently, without hitting central nervous system burnout."
+        "quote": "My recovery and skin radiance have both reached peak levels. VanguardBIO sets the benchmark."
     },
     {
         "num": 35,
-        "author": "Zane H. — Verified Buyer",
+        "author": "Kelsey H. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Gut health, body fat reduction, and accelerated tendon repair all rolled into one cohesive protocol. Incredible formulation."
+        "quote": "GHK-Cu and Glutathione are a powerhouse pairing for anyone seeking radiant, youthful skin."
     },
     {
         "num": 36,
-        "author": "Paxton W. — Verified Buyer",
-        "rating": "★★★★☆ (4.8 / 5)",
-        "quote": "Noticeable drop in recovery downtime after heavy leg volume. Highly recommend to serious competitors."
+        "author": "Mackenzie W. — Verified Buyer",
+        "rating": "★★★★☆ (4.9 / 5)",
+        "quote": "Noticeable smoothing of fine lines and a vibrant, healthy glow across my face and neck."
     },
     {
         "num": 37,
-        "author": "Reid B. — Verified Buyer",
+        "author": "Audrey L. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "The HGH component keeps skin texture tight and muscle fullness dialed in 24/7. Outstanding physical results."
+        "quote": "The quarterly plan ensures my routine stays uninterrupted. Fantastic anti-aging results."
     },
     {
         "num": 38,
-        "author": "Spencer D. — Verified Buyer",
+        "author": "Claire S. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "KPV solved my stubborn digestive inflammation. I feel lighter, leaner, and absorb nutrients far more efficiently."
+        "quote": "Energy levels are through the roof thanks to NAD+ and HGH. I feel ten years younger."
     },
     {
         "num": 39,
-        "author": "Knox L. — Verified Buyer",
+        "author": "Maya P. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Retatrutide plus HGH is the ultimate body recomposition stack. Every single biohacking metric improved."
+        "quote": "Photoprotection from Melanotan II has been fantastic during my outdoor runs. Zero sunburn."
     },
     {
         "num": 40,
-        "author": "Colt P. — Verified Buyer",
-        "rating": "★★★★☆ (4.9 / 5)",
-        "quote": "Smooth onboarding process and rapid shipping. VanguardBIO delivers top-tier clinical grade compounds."
+        "author": "Paige M. — Verified Buyer",
+        "rating": "★★★★☆ (4.8 / 5)",
+        "quote": "Professional medical oversight made me feel secure starting my first peptide protocol."
     },
     {
         "num": 41,
-        "author": "Jett R. — Verified Buyer",
+        "author": "Zoe R. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Elbow and knee inflammation completely mitigated. I'm lifting heavier at 42 than I did at 28."
+        "quote": "Skin texture is velvet-smooth and deep sleep scores are pristine. Unbelievable stack."
     },
     {
         "num": 42,
-        "author": "Rory S. — Verified Buyer",
+        "author": "Lily C. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "The sleep enhancement alone makes the Achilles protocol worth every penny. Unbroken 8 hours every single night."
+        "quote": "Collagen production stimulated by GHK-Cu has visibly firmed up my jawline and neck."
     },
     {
         "num": 43,
-        "author": "Brooks K. — Verified Buyer",
+        "author": "Grace H. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Visceral fat melted away while lean tissue stayed completely locked in. True clinical recomposition."
+        "quote": "Detoxification support from Glutathione cleared up my skin and boosted my daily vitality."
     },
     {
         "num": 44,
-        "author": "Rhett M. — Verified Buyer",
-        "rating": "★★★★☆ (4.8 / 5)",
-        "quote": "Comprehensive documentation made execution foolproof. Great support team behind the scenes."
+        "author": "Stella W. — Verified Buyer",
+        "rating": "★★★★☆ (4.9 / 5)",
+        "quote": "High-tier formulation with zero guesswork. The instructional videos made setup foolproof."
     },
     {
         "num": 45,
-        "author": "Zander H. — Verified Buyer",
+        "author": "Victoria K. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "TB-500 healed my chronic Achilles tendinopathy. The stack lives up directly to its namesake."
+        "quote": "My biological clock metrics have never looked better. Athena is an elite longevity protocol."
     },
     {
         "num": 46,
-        "author": "Dax W. — Verified Buyer",
+        "author": "Penelope B. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Appetite suppression from Retatrutide is smooth, clean, and completely devoid of jittery side effects."
+        "quote": "TB-500 and GHK-Cu keep my tissue repair and skin elasticity at peak performance."
     },
     {
         "num": 47,
-        "author": "Stetson B. — Verified Buyer",
+        "author": "Scarlett T. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Gut barrier function improved markedly. Bloating is entirely gone and training pumps are fuller."
+        "quote": "Radiant skin, boundless cellular energy, and effortless body tone maintenance."
     },
     {
         "num": 48,
-        "author": "Diesel T. — Verified Buyer",
-        "rating": "★★★★☆ (4.9 / 5)",
-        "quote": "Top-tier pharmaceutical quality. You can tell real clinical oversight went into formulating this stack."
+        "author": "Aria N. — Verified Buyer",
+        "rating": "★★★★☆ (4.8 / 5)",
+        "quote": "Noticeable reduction in oxidative stress and a brighter complexion overall."
     },
     {
         "num": 49,
-        "author": "Maverick C. — Verified Buyer",
+        "author": "Ellie J. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "My recovery metrics across my fitness tracker have never looked this green. Outstanding stack."
+        "quote": "The 503B pharmacy standard is evident in the remarkable purity and fast results."
     },
     {
         "num": 50,
-        "author": "Cash V. — Verified Buyer",
+        "author": "Nora F. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "The dual-vector recomposition effect of HGH and Retatrutide is unmatched by anything else on the market."
+        "quote": "NAD+ repletion completely changed my daily stamina. I have energy to spare after long work days."
     },
     {
         "num": 51,
-        "author": "Ridge F. — Verified Buyer",
+        "author": "Hazel M. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Joint aches from heavy lifting vanished within three weeks. TB-500 is an absolute powerhouse."
+        "quote": "Skin luminescence is off the charts. Glutathione is a permanent fixture in my routine now."
     },
     {
         "num": 52,
-        "author": "Flint D. — Verified Buyer",
-        "rating": "★★★★☆ (4.8 / 5)",
-        "quote": "Clear instructions, fast delivery, and premium packaging. Highly satisfied with the Achilles Protocol."
+        "author": "Aurora S. — Verified Buyer",
+        "rating": "★★★★☆ (4.9 / 5)",
+        "quote": "Flawless onboarding and expert support. The results on skin firmness are undeniable."
     },
     {
         "num": 53,
-        "author": "Boone L. — Verified Buyer",
+        "author": "Violet D. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Sleep architecture and cognitive clarity both received massive boosts. Waking up dialed in every morning."
+        "quote": "GHK-Cu stimulated incredible hair and skin health improvements within six weeks."
     },
     {
         "num": 54,
-        "author": "Thad P. — Verified Buyer",
+        "author": "Savannah R. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Visceral adipose tissue dropped significantly on my latest scan. Retatrutide is a marvel of modern biotechnology."
+        "quote": "Deep sleep architecture and skin healing metrics reached new personal records."
     },
     {
         "num": 55,
-        "author": "Briggs M. — Verified Buyer",
+        "author": "Audrey K. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "KPV sorted out my chronic gut inflammation. Digestion is effortless now."
+        "quote": "The Athena protocol is a masterclass in comprehensive anti-aging biohacking."
     },
     {
         "num": 56,
-        "author": "Hank R. — Verified Buyer",
-        "rating": "★★★★☆ (4.9 / 5)",
-        "quote": "Professional telehealth review and custom dosing guidance made getting started seamless."
+        "author": "Brooklyn H. — Verified Buyer",
+        "rating": "★★★★☆ (4.8 / 5)",
+        "quote": "Very impressed with the third-party purity testing and clinical documentation."
     },
     {
         "num": 57,
-        "author": "Wade S. — Verified Buyer",
+        "author": "Bella C. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Muscle fullness and vascularity increased noticeably while body fat peeled away effortlessly."
+        "quote": "Melanotan II gives a gorgeous, natural glow while protecting against photoaging."
     },
     {
         "num": 58,
-        "author": "Colter K. — Verified Buyer",
+        "author": "Skylar W. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "My nagging shoulder injury finally healed after months of stalled progress. TB-500 is incredible."
+        "quote": "Body composition and skin radiance both dialed in perfectly. Incredible stack."
     },
     {
         "num": 59,
-        "author": "Zeb H. — Verified Buyer",
+        "author": "Lucy T. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Deep sleep recovery scores reached an all-time high. HGH delivers exactly what it promises."
+        "quote": "NAD+ and HGH synergy provides endless vitality and youthful skin tightness."
     },
     {
         "num": 60,
-        "author": "Huck B. — Verified Buyer",
-        "rating": "★★★★☆ (4.8 / 5)",
-        "quote": "Exceptional purity and professional service. VanguardBIO is heads above other suppliers."
+        "author": "Paisley P. — Verified Buyer",
+        "rating": "★★★★☆ (4.9 / 5)",
+        "quote": "Smooth delivery and exceptional customer support from the VanguardBIO team."
     },
     {
         "num": 61,
-        "author": "Gage W. — Verified Buyer",
+        "author": "Everly B. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Retatrutide appetite regulation is clean and sustained. Zero energy crashes during grueling workouts."
+        "quote": "Collagen density in my face and neck improved visibly within the first month."
     },
     {
         "num": 62,
-        "author": "Zackary T. — Verified Buyer",
+        "author": "Anna L. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Gut health optimization via KPV made my nutrient absorption skyrocket. Incredible physiological shift."
+        "quote": "Glutathione and GHK-Cu cleared my skin blemishes and brought back a youthful glow."
     },
     {
         "num": 63,
-        "author": "Laramie N. — Verified Buyer",
+        "author": "Caroline N. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "The quarterly plan is well worth it. Consistent deliveries and unmatched physical results."
+        "quote": "The quarterly plan is seamless. Automatic shipments arrive right when needed."
     },
     {
         "num": 64,
-        "author": "Tag V. — Verified Buyer",
-        "rating": "★★★★☆ (4.9 / 5)",
-        "quote": "Joint recovery speed is phenomenal. I can push high volume without paying for it the next day."
+        "author": "Nova S. — Verified Buyer",
+        "rating": "★★★★☆ (4.8 / 5)",
+        "quote": "High-end clinical grade compounds that deliver genuine anti-aging results."
     },
     {
         "num": 65,
-        "author": "Coleson J. — Verified Buyer",
+        "author": "Genesis M. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "HGH and Retatrutide working together is like cheating physics. Lean mass up, fat mass down."
+        "quote": "My skin feels thicker, more elastic, and intensely hydrated from within."
     },
     {
         "num": 66,
-        "author": "Stran P. — Verified Buyer",
+        "author": "Emilia R. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Third-party COAs gave me total trust, and the actual results on my bloodwork confirmed every claim."
+        "quote": "Telehealth consultation was professional, thorough, and highly informative."
     },
     {
         "num": 67,
-        "author": "Jent M. — Verified Buyer",
+        "author": "Elena K. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "KPV cleared up my GI distress completely. Systemic inflammation markers dropped across the board."
+        "quote": "Oxidative stress markers dropped dramatically. I feel vibrant and look radiant."
     },
     {
         "num": 68,
-        "author": "Crewe L. — Verified Buyer",
-        "rating": "★★★★☆ (4.8 / 5)",
-        "quote": "Solid support team and fast shipping. Protocols are clearly laid out for easy self-administration."
+        "author": "Sadie V. — Verified Buyer",
+        "rating": "★★★★☆ (4.9 / 5)",
+        "quote": "Fantastic stack for maintaining skin integrity and metabolic tone effortlessly."
     },
     {
         "num": 69,
-        "author": "Slater H. — Verified Buyer",
+        "author": "Delilah W. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Achilles protocol restored my connective tissue integrity after years of heavy powerlifting."
+        "quote": "TB-500 and GHK-Cu healed minor tissue wear and enhanced skin smoothness."
     },
     {
         "num": 70,
-        "author": "Bodie K. — Verified Buyer",
+        "author": "Adalyn H. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Sleep architecture is pristine. Waking up refreshed before my 5 AM training session every single day."
+        "quote": "Deep sleep and skin luminosity metrics have never been higher. Absolutely love Athena."
     },
     {
         "num": 71,
-        "author": "Taggart R. — Verified Buyer",
+        "author": "Madelyn T. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Visceral fat reduction was immediately apparent on my DEXA scans. Retatrutide is state-of-the-art."
+        "quote": "The 503B pharmacy standard gives absolute confidence in safety and formulation purity."
     },
     {
         "num": 72,
-        "author": "Bridger S. — Verified Buyer",
-        "rating": "★★★★☆ (4.9 / 5)",
-        "quote": "Fantastic stack design. Combining repair, growth, and metabolism into one monthly order is brilliant."
+        "author": "Gianna C. — Verified Buyer",
+        "rating": "★★★★☆ (4.8 / 5)",
+        "quote": "Noticeable smoothing of fine lines around the eyes. GHK-Cu is truly impressive."
     },
     {
         "num": 73,
-        "author": "Colter D. — Verified Buyer",
+        "author": "Maya S. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "TB-500 fixed my nagging patellar tendinopathy. Full range of motion restored."
+        "quote": "NAD+ repletion eliminated my afternoon fatigue completely. Boundless cellular energy."
     },
     {
         "num": 74,
-        "author": "Rigg M. — Verified Buyer",
+        "author": "Ellie B. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "HGH elevation keeps my muscle fullness peaked and skin quality immaculate. Unbelievable compound."
+        "quote": "Skin radiance and tone are consistently glowing week after week. Exceptional protocol."
     },
     {
         "num": 75,
-        "author": "Onyx W. — Verified Buyer",
+        "author": "Harper P. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "KPV healed my gut lining. Nutrient utilization feels noticeably more efficient."
+        "quote": "Professional medical oversight made starting my peptide journey comfortable and secure."
     },
     {
         "num": 76,
-        "author": "Pike V. — Verified Buyer",
-        "rating": "★★★★☆ (4.8 / 5)",
-        "quote": "Professional consultation ensured my dosing was dialed right from day one. Great experience."
+        "author": "Camila D. — Verified Buyer",
+        "rating": "★★★★☆ (4.9 / 5)",
+        "quote": "Melanotan II provides an even, beautiful photoprotective tan all year round."
     },
     {
         "num": 77,
-        "author": "Remington B. — Verified Buyer",
+        "author": "Athena J. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Retatrutide suppresses cravings effortlessly while preserving full training intensity."
+        "quote": "Living up completely to its namesake. Skin tightness, body tone, and radiance are elite."
     },
     {
         "num": 78,
-        "author": "Hays H. — Verified Buyer",
+        "author": "Isla M. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Recovery metrics across my Oura ring have never been higher. Deep sleep and REM sleep both doubled."
+        "quote": "Glutathione and NAD+ work wonders for internal cleansing and external glow."
     },
     {
         "num": 79,
-        "author": "Jovanny C. — Verified Buyer",
+        "author": "Clara W. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "The 503B pharmacy compounding standard gives absolute confidence in product safety and purity."
+        "quote": "Dermal density ultrasound scans confirmed massive collagen gains by week eight."
     },
     {
         "num": 80,
-        "author": "Mac K. — Verified Buyer",
-        "rating": "★★★★☆ (4.9 / 5)",
-        "quote": "Phenomenal body recomposition results. Dropped 4% body fat while adding lean mass."
+        "author": "Ruby L. — Verified Buyer",
+        "rating": "★★★★☆ (4.8 / 5)",
+        "quote": "Fast delivery, gorgeous packaging, and crystal-clear protocol instructions."
     },
     {
         "num": 81,
-        "author": "Gideon T. — Verified Buyer",
+        "author": "Sophie K. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Chronic elbow inflammation resolved completely. TB-500 is a mandatory addition for serious lifters."
+        "quote": "My skin elasticity and overall youthful vitality have exceeded all expectations."
     },
     {
         "num": 82,
-        "author": "Thatcher R. — Verified Buyer",
+        "author": "Alice R. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Gut health support via KPV eliminated my post-workout GI distress entirely."
+        "quote": "HGH elevation keeps my skin firm, sleep deep, and body composition lean."
     },
     {
         "num": 83,
-        "author": "Sutter M. — Verified Buyer",
+        "author": "Eva H. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "HGH and Retatrutide stack delivers jaw-dropping aesthetic and metabolic improvements."
+        "quote": "GHK-Cu is an absolute staple for anyone serious about reversing skin aging."
     },
     {
         "num": 84,
-        "author": "Calum S. — Verified Buyer",
-        "rating": "★★★★☆ (4.8 / 5)",
-        "quote": "Fast shipping, pristine packaging, and clear documentation. Top-tier service."
+        "author": "Quinn C. — Verified Buyer",
+        "rating": "★★★★☆ (4.9 / 5)",
+        "quote": "Comprehensive documentation and effortless administration make this protocol top-tier."
     },
     {
         "num": 85,
-        "author": "Knoxley D. — Verified Buyer",
+        "author": "Vivian T. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "My recovery time between heavy deadlift sessions is practically nonexistent now."
+        "quote": "Systemic inflammation plummeted, leaving my complexion crystal clear and vibrant."
     },
     {
         "num": 86,
-        "author": "Vance W. — Verified Buyer",
+        "author": "Rebekah S. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Retatrutide is lightyears ahead of older GLP-1s. Zero fatigue, maximum fat loss."
+        "quote": "The 503B pharmacy compounding standard guarantees immaculate product quality."
     },
     {
         "num": 87,
-        "author": "Damon H. — Verified Buyer",
+        "author": "Daisy M. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Telehealth onboarding was seamless and professional. Health expert oversight is top quality."
+        "quote": "Cellular energy and skin luminosity both reached remarkable new heights."
     },
     {
         "num": 88,
-        "author": "Corbin B. — Verified Buyer",
-        "rating": "★★★★☆ (4.9 / 5)",
-        "quote": "Sleep quality and joint resilience improved dramatically within the first two weeks."
+        "author": "Melanie P. — Verified Buyer",
+        "rating": "★★★★☆ (4.8 / 5)",
+        "quote": "Solid anti-aging results with noticeable improvements in skin texture and firmness."
     },
     {
         "num": 89,
-        "author": "Lawson V. — Verified Buyer",
+        "author": "Juliana B. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Systemic inflammation markers dropped significantly on my quarterly bloodwork. Incomparable stack."
+        "quote": "NAD+ and Glutathione synergy gave me endless stamina and a radiant complexion."
     },
     {
         "num": 90,
-        "author": "Leopold P. — Verified Buyer",
+        "author": "Valeria W. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Lean tissue retention while cutting body fat has never been easier. Brilliant protocol design."
+        "quote": "Telehealth onboarding was thorough and expert-led. Protocol guidance is crystal clear."
     },
     {
         "num": 91,
-        "author": "Abel K. — Verified Buyer",
+        "author": "Josephine K. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "KPV sorted out my gut permeability issues. Absorption and energy levels are through the roof."
+        "quote": "Collagen synthesis from GHK-Cu visibly firmed up fine lines around my eyes."
     },
     {
         "num": 92,
-        "author": "Soren M. — Verified Buyer",
-        "rating": "★★★★☆ (4.8 / 5)",
-        "quote": "TB-500 healed my lingering rotator cuff strain faster than anything I've tried before."
+        "author": "Fiona L. — Verified Buyer",
+        "rating": "★★★★☆ (4.9 / 5)",
+        "quote": "Wonderful quarterly plan that keeps my anti-aging regimen uninterrupted."
     },
     {
         "num": 93,
-        "author": "Orion R. — Verified Buyer",
+        "author": "Iris R. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "HGH sleep benefits kicked in on night three. Deep sleep metrics doubled instantly."
+        "quote": "TB-500 and GHK-Cu keep my skin tissue resilient, smooth, and youthful."
     },
     {
         "num": 94,
-        "author": "Stellan H. — Verified Buyer",
+        "author": "Lillian H. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Retatrutide appetite control is effortless. Visceral fat melted off my midsection."
+        "quote": "Deep sleep metrics and skin radiance scores hit all-time personal bests."
     },
     {
         "num": 95,
-        "author": "Magnus S. — Verified Buyer",
+        "author": "Adeline S. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Professional 503B compounding standards give complete peace of mind. Outstanding results."
+        "quote": "Professional compounding quality and exceptional customer care from VanguardBIO."
     },
     {
         "num": 96,
-        "author": "Evander W. — Verified Buyer",
-        "rating": "★★★★☆ (4.9 / 5)",
-        "quote": "Recovery ceiling is doubled. I'm training with intensity I haven't seen in a decade."
+        "author": "Gemma T. — Verified Buyer",
+        "rating": "★★★★☆ (4.8 / 5)",
+        "quote": "Melanotan II provides gorgeous photoprotection with zero sun damage."
     },
     {
         "num": 97,
-        "author": "Alaric C. — Verified Buyer",
+        "author": "Cora C. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "The quarterly plan is seamless. Automatic refills arrive right on schedule."
+        "quote": "Body tone and skin luminosity improved in tandem. Highly satisfied with Athena."
     },
     {
         "num": 98,
-        "author": "Dorian B. — Verified Buyer",
+        "author": "Rosalie M. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Joint mobility in my knees and shoulders is fully restored. TB-500 is essential."
+        "quote": "HGH elevation and NAD+ repletion keep my skin tight and energy boundless."
     },
     {
         "num": 99,
-        "author": "Ambrose K. — Verified Buyer",
+        "author": "Beatrice V. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Gut health and nutrient partitioning improved dramatically thanks to KPV."
+        "quote": "Glutathione cleared up my skin tone completely. The radiant glow is permanent."
     },
     {
         "num": 100,
-        "author": "Lysander M. — Verified Buyer",
-        "rating": "★★★★☆ (4.8 / 5)",
-        "quote": "Exceptional body recomposition stack. Lean mass up, fat mass down cleanly."
+        "author": "Elise W. — Verified Buyer",
+        "rating": "★★★★☆ (4.9 / 5)",
+        "quote": "Exceptional formulation for women demanding high-tier aesthetic anti-aging."
     },
     {
         "num": 101,
-        "author": "Caspian T. — Verified Buyer",
+        "author": "Genevieve B. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Retatrutide and HGH synergy is unmatched. DEXA scans confirm elite visceral fat loss."
+        "quote": "Dermal density ultrasound scans confirmed massive collagen gains by week eight."
     },
     {
         "num": 102,
-        "author": "Thane R. — Verified Buyer",
+        "author": "Antonia P. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Telehealth consultation was thorough and expert-led. Protocol guidance is crystal clear."
+        "quote": "Telehealth consultation was professional, thorough, and highly informative."
     },
     {
         "num": 103,
-        "author": "Viggo S. — Verified Buyer",
+        "author": "Helena K. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Sleep architecture and recovery metrics reached all-time personal bests."
+        "quote": "Oxidative stress markers dropped dramatically. I feel vibrant and look radiant."
     },
     {
         "num": 104,
-        "author": "Leif H. — Verified Buyer",
-        "rating": "★★★★☆ (4.9 / 5)",
-        "quote": "Nagging connective tissue issues vanished by week four. Incredible healing protocol."
+        "author": "Theodora R. — Verified Buyer",
+        "rating": "★★★★☆ (4.8 / 5)",
+        "quote": "Fantastic stack for maintaining skin integrity and metabolic tone effortlessly."
     },
     {
         "num": 105,
-        "author": "Ronan W. — Verified Buyer",
+        "author": "Matilda S. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Systemic inflammation plummeted. My joints feel bulletproof during heavy sessions."
+        "quote": "TB-500 and GHK-Cu healed minor tissue wear and enhanced skin smoothness."
     },
     {
         "num": 106,
-        "author": "Torin B. — Verified Buyer",
+        "author": "Josephine H. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "KPV solved my chronic gut inflammation. Digestion is smooth and effortless."
+        "quote": "Deep sleep and skin luminosity metrics have never been higher. Absolutely love Athena."
     },
     {
         "num": 107,
-        "author": "Stellan M. — Verified Buyer",
+        "author": "Rosalind M. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "The 503B pharmacy quality is evident in every single injection. Flawless purity."
+        "quote": "The 503B pharmacy standard gives absolute confidence in safety and formulation purity."
     },
     {
         "num": 108,
-        "author": "Kian C. — Verified Buyer",
-        "rating": "★★★★☆ (4.8 / 5)",
-        "quote": "Appetite suppression is smooth and sustained. Retatrutide is lightyears ahead."
+        "author": "Marguerite T. — Verified Buyer",
+        "rating": "★★★★☆ (4.9 / 5)",
+        "quote": "Noticeable smoothing of fine lines around the eyes. GHK-Cu is truly impressive."
     },
     {
         "num": 109,
-        "author": "Idris K. — Verified Buyer",
+        "author": "Evangeline C. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "HGH elevation keeps muscle fullness dialed in 24/7. Outstanding physical results."
+        "quote": "NAD+ repletion eliminated my afternoon fatigue completely. Boundless cellular energy."
     },
     {
         "num": 110,
-        "author": "Eoghan V. — Verified Buyer",
+        "author": "Beatrice B. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Recovery time between heavy leg days cut in half. TB-500 is a miracle worker."
+        "quote": "Skin radiance and tone are consistently glowing week after week. Exceptional protocol."
     },
     {
         "num": 111,
-        "author": "Cillian R. — Verified Buyer",
+        "author": "Cornelia W. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Visceral fat melted away while lean tissue stayed completely intact. True recomposition."
+        "quote": "Professional medical oversight made starting my peptide journey comfortable and secure."
     },
     {
         "num": 112,
-        "author": "Tadhg P. — Verified Buyer",
-        "rating": "★★★★☆ (4.9 / 5)",
-        "quote": "Comprehensive documentation made execution foolproof. Great support team."
+        "author": "Wilhelmina K. — Verified Buyer",
+        "rating": "★★★★☆ (4.8 / 5)",
+        "quote": "Melanotan II provides an even, beautiful photoprotective tan all year round."
     },
     {
         "num": 113,
-        "author": "Fionn M. — Verified Buyer",
+        "author": "Florence D. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Deep sleep duration doubled in week one. Waking up fully restored every single morning."
+        "quote": "Living up completely to its namesake. Skin tightness, body tone, and radiance are elite."
     },
     {
         "num": 114,
-        "author": "Darragh S. — Verified Buyer",
+        "author": "Agnes V. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Gut health optimization via KPV made my nutrient absorption skyrocket."
+        "quote": "Glutathione and NAD+ work wonders for internal cleansing and external glow."
     },
     {
         "num": 115,
-        "author": "Oisin H. — Verified Buyer",
+        "author": "Mabel L. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Third-party HPLC testing reports gave me total confidence. Results on bloodwork confirmed it."
+        "quote": "Dermal density ultrasound scans confirmed massive collagen gains by week eight."
     },
     {
         "num": 116,
-        "author": "Cormac B. — Verified Buyer",
-        "rating": "★★★★☆ (4.8 / 5)",
-        "quote": "Solid protocol for dedicated guys looking to bypass normal aging plateaus."
+        "author": "Edith R. — Verified Buyer",
+        "rating": "★★★★☆ (4.9 / 5)",
+        "quote": "Fast delivery, gorgeous packaging, and crystal-clear protocol instructions."
     },
     {
         "num": 117,
-        "author": "Declan W. — Verified Buyer",
+        "author": "Gertrude H. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Shoulder tendonitis that lingered for two years finally cleared up entirely."
+        "quote": "My skin elasticity and overall youthful vitality have exceeded all expectations."
     },
     {
         "num": 118,
-        "author": "Ronan K. — Verified Buyer",
+        "author": "Harriet S. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Retatrutide keeps cravings completely silent while maintaining full training power."
+        "quote": "HGH elevation keeps my skin firm, sleep deep, and body composition lean."
     },
     {
         "num": 119,
-        "author": "Bane V. — Verified Buyer",
+        "author": "Mildred P. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Professional telehealth consultation and custom dosing guidance made getting started seamless."
+        "quote": "GHK-Cu is an absolute staple for anyone serious about reversing skin aging."
     },
     {
         "num": 120,
-        "author": "Alistair T. — Verified Buyer",
-        "rating": "★★★★☆ (4.9 / 5)",
-        "quote": "Recovery metrics across my wearable device have never looked this green."
+        "author": "Florence T. — Verified Buyer",
+        "rating": "★★★★☆ (4.8 / 5)",
+        "quote": "Comprehensive documentation and effortless administration make this protocol top-tier."
     },
     {
         "num": 121,
-        "author": "Lachlan R. — Verified Buyer",
+        "author": "Blanche M. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "The dual-vector recomposition effect of HGH and Retatrutide is unmatched."
+        "quote": "Systemic inflammation plummeted, leaving my complexion crystal clear and vibrant."
     },
     {
         "num": 122,
-        "author": "Maddox S. — Verified Buyer",
+        "author": "Esther C. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Joint aches from heavy lifting vanished within three weeks. TB-500 is incredible."
+        "quote": "The 503B pharmacy compounding standard guarantees immaculate product quality."
     },
     {
         "num": 123,
-        "author": "Zayn H. — Verified Buyer",
+        "author": "Hazel B. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Clear instructions, fast delivery, and premium packaging. Highly satisfied."
+        "quote": "Cellular energy and skin luminosity both reached remarkable new heights."
     },
     {
         "num": 124,
-        "author": "Kyson B. — Verified Buyer",
-        "rating": "★★★★☆ (4.8 / 5)",
-        "quote": "Sleep architecture and cognitive clarity both received massive boosts."
+        "author": "Pearl W. — Verified Buyer",
+        "rating": "★★★★☆ (4.9 / 5)",
+        "quote": "Solid anti-aging results with noticeable improvements in skin texture and firmness."
     },
     {
         "num": 125,
-        "author": "Ryker M. — Verified Buyer",
+        "author": "Opal K. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Visceral adipose tissue dropped significantly on my latest scan. Retatrutide is elite."
+        "quote": "NAD+ and Glutathione synergy gave me endless stamina and a radiant complexion."
     },
     {
         "num": 126,
-        "author": "Zion W. — Verified Buyer",
+        "author": "Ruby V. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "KPV sorted out my chronic gut inflammation. Digestion is effortless now."
+        "quote": "Telehealth onboarding was thorough and expert-led. Protocol guidance is crystal clear."
     },
     {
         "num": 127,
-        "author": "Koa K. — Verified Buyer",
+        "author": "Stella R. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Professional telehealth review and custom dosing guidance made execution smooth."
+        "quote": "Collagen synthesis from GHK-Cu visibly firmed up fine lines around my eyes."
     },
     {
         "num": 128,
-        "author": "Orson V. — Verified Buyer",
-        "rating": "★★★★☆ (4.9 / 5)",
-        "quote": "Muscle fullness and vascularity increased noticeably while body fat peeled away."
+        "author": "Viola D. — Verified Buyer",
+        "rating": "★★★★☆ (4.8 / 5)",
+        "quote": "Wonderful quarterly plan that keeps my anti-aging regimen uninterrupted."
     },
     {
         "num": 129,
-        "author": "Sterling T. — Verified Buyer",
+        "author": "Clara H. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "My nagging shoulder injury finally healed after months of stalled progress."
+        "quote": "TB-500 and GHK-Cu keep my skin tissue resilient, smooth, and youthful."
     },
     {
         "num": 130,
-        "author": "Atlas R. — Verified Buyer",
+        "author": "Bessie S. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Deep sleep recovery scores reached an all-time high. HGH delivers."
+        "quote": "Deep sleep metrics and skin radiance scores hit all-time personal bests."
     },
     {
         "num": 131,
-        "author": "Remi B. — Verified Buyer",
+        "author": "Maud T. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Exceptional purity and professional service. VanguardBIO is heads above the rest."
+        "quote": "Professional compounding quality and exceptional customer care from VanguardBIO."
     },
     {
         "num": 132,
-        "author": "Soren H. — Verified Buyer",
-        "rating": "★★★★☆ (4.8 / 5)",
-        "quote": "Retatrutide appetite regulation is clean and sustained. Zero energy crashes."
+        "author": "Lillian C. — Verified Buyer",
+        "rating": "★★★★☆ (4.9 / 5)",
+        "quote": "Melanotan II provides gorgeous photoprotection with zero sun damage."
     },
     {
         "num": 133,
-        "author": "Titan S. — Verified Buyer",
+        "author": "Flora M. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Gut health optimization via KPV made my nutrient absorption skyrocket."
+        "quote": "Body tone and skin luminosity improved in tandem. Highly satisfied with Athena."
     },
     {
         "num": 134,
-        "author": "Zephyr M. — Verified Buyer",
+        "author": "Nellie B. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "The quarterly plan is well worth it. Consistent deliveries and stellar results."
+        "quote": "HGH elevation and NAD+ repletion keep my skin tight and energy boundless."
     },
     {
         "num": 135,
-        "author": "Orion W. — Verified Buyer",
+        "author": "Lottie V. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Joint recovery speed is phenomenal. I can push high volume without paying for it."
+        "quote": "Glutathione cleared up my skin tone completely. The radiant glow is permanent."
     },
     {
         "num": 136,
-        "author": "Cyrus K. — Verified Buyer",
-        "rating": "★★★★☆ (4.9 / 5)",
-        "quote": "HGH and Retatrutide working together is like cheating physics. Lean mass up."
+        "author": "Matilda W. — Verified Buyer",
+        "rating": "★★★★☆ (4.8 / 5)",
+        "quote": "Exceptional formulation for women demanding high-tier aesthetic anti-aging."
     },
     {
         "num": 137,
-        "author": "Darius V. — Verified Buyer",
+        "author": "Hattie K. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Third-party COAs gave me total trust, and bloodwork confirmed every claim."
+        "quote": "Dermal density ultrasound scans confirmed massive collagen gains by week eight."
     },
     {
         "num": 138,
-        "author": "Cassian B. — Verified Buyer",
+        "author": "Cora R. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "KPV cleared up my GI distress completely. Systemic inflammation markers dropped."
+        "quote": "Telehealth consultation was professional, thorough, and highly informative."
     },
     {
         "num": 139,
-        "author": "Leander T. — Verified Buyer",
+        "author": "Eula D. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Solid support team and fast shipping. Protocols are clearly laid out."
+        "quote": "Oxidative stress markers dropped dramatically. I feel vibrant and look radiant."
     },
     {
         "num": 140,
-        "author": "Evander R. — Verified Buyer",
-        "rating": "★★★★☆ (4.8 / 5)",
-        "quote": "Achilles protocol restored my connective tissue integrity after years of heavy lifting."
+        "author": "Minna H. — Verified Buyer",
+        "rating": "★★★★☆ (4.9 / 5)",
+        "quote": "Fantastic stack for maintaining skin integrity and metabolic tone effortlessly."
     },
     {
         "num": 141,
-        "author": "Perseus M. — Verified Buyer",
+        "author": "Lula S. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Sleep architecture is pristine. Waking up refreshed before my early workouts."
+        "quote": "TB-500 and GHK-Cu healed minor tissue wear and enhanced skin smoothness."
     },
     {
         "num": 142,
-        "author": "Theseus H. — Verified Buyer",
+        "author": "Lida T. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Visceral fat reduction was immediately apparent on DEXA. Retatrutide is state-of-the-art."
+        "quote": "Deep sleep and skin luminosity metrics have never been higher. Absolutely love Athena."
     },
     {
         "num": 143,
-        "author": "Leonidas W. — Verified Buyer",
+        "author": "Nettie C. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Fantastic stack design. Combining repair, growth, and metabolism is brilliant."
+        "quote": "The 503B pharmacy standard gives absolute confidence in safety and formulation purity."
     },
     {
         "num": 144,
-        "author": "Orpheus S. — Verified Buyer",
-        "rating": "★★★★☆ (4.9 / 5)",
-        "quote": "TB-500 fixed my nagging patellar tendinopathy. Full range of motion restored."
+        "author": "Rosie M. — Verified Buyer",
+        "rating": "★★★★☆ (4.8 / 5)",
+        "quote": "Noticeable smoothing of fine lines around the eyes. GHK-Cu is truly impressive."
     },
     {
         "num": 145,
-        "author": "Valerius K. — Verified Buyer",
+        "author": "Dora B. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "HGH elevation keeps muscle fullness peaked and skin quality immaculate."
+        "quote": "NAD+ repletion eliminated my afternoon fatigue completely. Boundless cellular energy."
     },
     {
         "num": 146,
-        "author": "Tiberius B. — Verified Buyer",
+        "author": "Effie W. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "KPV healed my gut lining. Nutrient utilization feels noticeably more efficient."
+        "quote": "Skin radiance and tone are consistently glowing week after week. Exceptional protocol."
     },
     {
         "num": 147,
-        "author": "Maximus V. — Verified Buyer",
+        "author": "Lola K. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Professional consultation ensured my dosing was dialed right from day one."
+        "quote": "Professional medical oversight made starting my peptide journey comfortable and secure."
     },
     {
         "num": 148,
-        "author": "Aurelius T. — Verified Buyer",
-        "rating": "★★★★☆ (4.8 / 5)",
-        "quote": "Retatrutide suppresses cravings effortlessly while preserving full training intensity."
+        "author": "Bessie R. — Verified Buyer",
+        "rating": "★★★★☆ (4.9 / 5)",
+        "quote": "Melanotan II provides an even, beautiful photoprotective tan all year round."
     },
     {
         "num": 149,
-        "author": "Magnus R. — Verified Buyer",
+        "author": "Maggie D. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Recovery metrics across my Oura ring have never been higher. Deep sleep doubled."
+        "quote": "Living up completely to its namesake. Skin tightness, body tone, and radiance are elite."
     },
     {
         "num": 150,
-        "author": "Severin H. — Verified Buyer",
+        "author": "May H. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "The 503B pharmacy compounding standard gives absolute confidence in product safety."
+        "quote": "Glutathione and NAD+ work wonders for internal cleansing and external glow."
     }
 ]
 
@@ -1070,7 +1070,7 @@ def render_ad_image(item: dict) -> Image.Image:
 @app.get("/")
 def index():
     return {
-        "service": "VanguardBIO achilles Ad Batch Generator",
+        "service": "VanguardBIO Athena Ad Batch Generator",
         "total_reviews": len(REVIEWS),
         "preview_one": "/preview/1",
         "download_all_zip": "/generate-zip"
@@ -1095,11 +1095,11 @@ def generate_zip():
             img_io = io.BytesIO()
             img.save(img_io, format="PNG", dpi=(72, 72))
             img_io.seek(0)
-            zf.writestr(f"achilles_ad_{item['num']:03d}.png", img_io.read())
+            zf.writestr(f"Athena_ad_{item['num']:03d}.png", img_io.read())
 
     zip_buffer.seek(0)
     return StreamingResponse(
         zip_buffer,
         media_type="application/zip",
-        headers={"Content-Disposition": "attachment; filename=achilles_protocol_100_ads.zip"}
+        headers={"Content-Disposition": "attachment; filename=Athena_protocol_100_ads.zip"}
     )
