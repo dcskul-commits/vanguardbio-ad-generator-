@@ -96,782 +96,908 @@ def wrap_text_pixels(text: str, font: ImageFont.ImageFont, max_width: int, draw:
         lines.append(" ".join(current_line))
     return lines
 
-# Complete Zeus Protocol Review Dataset (1 to 129)
+# Complete achilles Protocol Review Dataset (1 to 129)
 REVIEWS = [
     {
         "num": 1,
         "author": "Marcus T. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Chronic shoulder impingement resolved in 4 weeks. I’ve dealt with rotator cuff inflammation for over three years. Adding the Zeus protocol took my joint mobility from restricted to full range of motion by week four. The BPC-157 and TB-500 combination accelerated my tissue repair noticeably.",
+        "quote": "Chronic shoulder impingement resolved in 4 weeks. I’ve dealt with rotator cuff inflammation for over three years. Adding the Achilles protocol took my joint mobility from restricted to full range of motion by week four. The HGH and TB-500 combination accelerated my tissue repair noticeably."
     },
     {
         "num": 2,
-        "author": "David K. — Verified Buyer",
+        "author": "Julian R. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Knees feel twenty years younger. Heavy squatting used to require two days of ice and NSAIDs. By week three on Zeus, systemic inflammation was practically gone. Tendon-to-bone recovery is legitimately on another level.",
+        "quote": "The Achilles Protocol completely transformed my recovery metrics. Sleep architecture improved dramatically within the first ten days, and my tendonitis flare-ups after heavy pulling sessions disappeared entirely. Seamless telehealth onboarding and professional-grade packaging."
     },
     {
         "num": 3,
-        "author": "Elena R. — Verified Buyer",
-        "rating": "★★★★☆ (4.9 / 5)",
-        "quote": "Exceptional soft tissue healing. Tore a hamstring grade-1 during sprint work. My physical therapist was shocked at how rapidly the scar tissue smoothed out and tensile strength returned. High-purity compounds make a massive difference.",
+        "author": "Dr. Ethan K. — Verified Buyer",
+        "rating": "★★★★★ (5.0 / 5)",
+        "quote": "As someone who evaluates protocols professionally, the precision of the peptide stack here is exceptional. Rapid muscle recovery and a noticeable drop in systemic inflammation markers by week six. Highly recommend for high-performance physical optimization."
     },
     {
         "num": 4,
-        "author": "Brett W. — Verified Buyer",
-        "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Post-op recovery accelerator. Used Zeus post-meniscectomy under physician guidance. Swelling dropped faster than expected, and my tissue healing metrics outpaced normal rehabilitation timelines by at least 40%.",
+        "author": "Damon W. — Verified Buyer",
+        "rating": "★★★★☆ (4.8 / 5)",
+        "quote": "Remarkable body recomposition and accelerated healing from a lingering knee issue. The documentation and protocol clarity made self-administration straightforward. Noticeable gains in overall joint resilience and sustained daily energy."
     },
     {
         "num": 5,
-        "author": "Garrett H. — Verified Buyer",
-        "rating": "★★★★☆ (4.8 / 5)",
-        "quote": "Remarkable elbow tendonitis relief. Golfer’s elbow had plagued my pull days for months. After 21 days of daily BPC administration inside the protocol, the chronic ache completely vanished.",
+        "author": "Lucas V. — Verified Buyer",
+        "rating": "★★★★★ (5.0 / 5)",
+        "quote": "Retatrutide combined with HGH is an absolute game-changer. Stripped stubborn visceral fat while packing on clean mass. DEXA scan at week 8 showed a massive shift in my body fat percentage."
     },
     {
         "num": 6,
-        "author": "Samantha L. — Verified Buyer",
+        "author": "Brandon C. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Crossfit recovery cheat code. High-volume training days no longer leave me crippled the following morning. My recovery delta between workouts has halved. Sourcing from a 503B facility gives total peace of mind.",
+        "quote": "The inclusion of KPV cleared up digestive issues I've battled for years. Better nutrient absorption has directly improved my training output and daily vitality."
     },
     {
         "num": 7,
-        "author": "Jason P. — Verified Buyer",
+        "author": "Garrett M. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Achilles stiffness is completely gone. Morning heel pain and stiffness used to take 20 minutes of stretching to clear. Within two weeks of starting Zeus, my Achilles felt pliable and completely pain-free.",
+        "quote": "TB-500 worked wonders on my chronic elbow pain. Back to pressing heavy without any nagging discomfort. The 503B pharmacy quality gives complete peace of mind."
     },
     {
         "num": 8,
-        "author": "Christopher N. — Verified Buyer",
+        "author": "Spencer H. — Verified Buyer",
         "rating": "★★★★☆ (4.9 / 5)",
-        "quote": "Connective tissue support that works. I powerlift in the Masters division. The tissue remodeling from TB-500 combined with HGH has kept my pecs and bicep tendons completely resilient during peaking blocks.",
+        "quote": "Deep sleep quality skyrocketed in week one thanks to the HGH component. Waking up fully rested and ready to attack heavy compound lifts."
     },
     {
         "num": 9,
-        "author": "Tyler B. — Verified Buyer",
+        "author": "Travis L. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "CRP markers dropped dramatically. My baseline high-sensitivity CRP dropped from 2.8 down to 0.6 on my 8-week lab draw. The systemic anti-inflammatory effect is measurable and undeniable.",
+        "quote": "Unreal metabolic shift. Retatrutide curbs appetite effortlessly while keeping energy levels completely stable throughout intense training blocks."
     },
     {
         "num": 10,
-        "author": "Rachel M. — Verified Buyer",
-        "rating": "★★★★☆ (4.8 / 5)",
-        "quote": "Faster muscle tear regeneration. Had a lingering calf strain that kept re-aggravating. The cellular recovery stack stabilized the area within two weeks, letting me return to full road running.",
+        "author": "Nate P. — Verified Buyer",
+        "rating": "★★★★★ (5.0 / 5)",
+        "quote": "The entire onboarding and health expert review process was seamless. The Achilles stack is built for serious lifters who don't want to compromise."
     },
     {
         "num": 11,
-        "author": "Nicholas S. — Verified Buyer",
+        "author": "Derek B. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "BJJ joint wear-and-tear solved. Grappling three nights a week destroys fingers, neck, and lower back. Zeus keeps the inflammation suppressed and joint fluid healthy. I wake up ready to roll.",
+        "quote": "Noticed a substantial reduction in systemic inflammation markers by week six. My joints feel lubricated and resilient even after brutal leg days."
     },
     {
         "num": 12,
-        "author": "Sean D. — Verified Buyer",
-        "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Ligament stability is back. Sprained my ankle badly on a trail run. The repair rate with TB-500 and BPC-157 was easily double any healing timeline I've experienced in the past.",
+        "author": "Kyle S. — Verified Buyer",
+        "rating": "★★★★☆ (4.8 / 5)",
+        "quote": "Cleanest physical recomposition stack I've ever run. Lean mass went up while waistline dropped steadily month over month."
     },
     {
         "num": 13,
-        "author": "Victor M. — Verified Buyer",
-        "rating": "★★★★☆ (4.9 / 5)",
-        "quote": "Mobility index improved noticeably. Hip capsule stiffness was limiting my depth on squats. By week five, my internal rotation and hip mobility showed significant measurable improvement.",
+        "author": "Zachary M. — Verified Buyer",
+        "rating": "★★★★★ (5.0 / 5)",
+        "quote": "Professional packaging, rapid delivery, and crystal-clear protocol documentation. VanguardBIO sets the gold standard for peptide therapeutics."
     },
     {
         "num": 14,
-        "author": "Anthony C. — Verified Buyer",
+        "author": "Evan T. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Lab-verified purity shows in results. I've tried research peptides from generic grey-market vendors before with zero results. VanguardBIO’s 503B pharmacy grade products are an entirely different caliber.",
+        "quote": "My recovery time between heavy squat sessions was cut in half. The synergistic effect of HGH and TB-500 is palpable."
     },
     {
         "num": 15,
-        "author": "Lucas G. — Verified Buyer",
-        "rating": "★★★★☆ (4.8 / 5)",
-        "quote": "Back spasm recovery time collapsed. Lumbar facet joint irritation used to lay me out for a week. On Zeus, localized muscular tension dissipated within 48 hours.",
+        "author": "Logan K. — Verified Buyer",
+        "rating": "★★★★★ (5.0 / 5)",
+        "quote": "Gut health was always my bottleneck. KPV completely resolved my post-meal bloating and enhanced my overall nutrient partitioning."
     },
     {
         "num": 16,
-        "author": "Daniel O. — Verified Buyer",
-        "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Connective tissue density feels upgraded. Wrist pain from heavy pressing used to require wrist wraps. Now pressing bare-wristed with zero discomfort. The collagen synthesis signal is real.",
+        "author": "Caleb J. — Verified Buyer",
+        "rating": "★★★★☆ (4.9 / 5)",
+        "quote": "Exceptional results on body fat loss. Retatrutide is lightyears ahead of older generation compounds."
     },
     {
         "num": 17,
-        "author": "Eric H. — Verified Buyer",
+        "author": "Tyler R. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "No more morning joint creaks. Getting out of bed used to sound like bubble wrap. Week four was the tipping point—joints move effortlessly and fluidly with zero morning friction.",
+        "quote": "At 46 years old, this protocol brought back my physical capacity from a decade ago. Energy, recovery, and body composition are all dialed in."
     },
     {
         "num": 18,
-        "author": "Travis K. — Verified Buyer",
-        "rating": "★★★★☆ (4.9 / 5)",
-        "quote": "Rapid micro-tear recovery. Eccentric training blocks usually induce DOMS that last four days. On Zeus, soreness clears out completely within 24 to 36 hours.",
+        "author": "Austin F. — Verified Buyer",
+        "rating": "★★★★★ (5.0 / 5)",
+        "quote": "The third-party HPLC testing reports gave me total confidence before starting. Results on bloodwork and body composition have been stellar."
     },
     {
         "num": 19,
-        "author": "Kyle F. — Verified Buyer",
+        "author": "Cole H. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Tendinopathy cleared up. Patellar tendinopathy made descending stairs painful. The tissue repair velocity of the BPC/TB duo took care of it by week six.",
+        "quote": "Zero joint creakiness left in my knees. TB-500 and HGH are an unstoppable recovery pairing for heavy athletes."
     },
     {
         "num": 20,
-        "author": "Jordan E. — Verified Buyer",
-        "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Surgical scar tissue softened. TB-500’s actin-sequestering action noticeably reduced fibrous tension around an old surgical site on my knee. Mobility is vastly smoother.",
+        "author": "Jared D. — Verified Buyer",
+        "rating": "★★★★☆ (4.8 / 5)",
+        "quote": "A bit of an investment, but the return on physical performance and body composition makes every dollar worth it."
     },
     {
         "num": 21,
-        "author": "Brandon Y. — Verified Buyer",
-        "rating": "★★★★☆ (4.8 / 5)",
-        "quote": "Fast track back to training. Kept tweaking my hamstring during track intervals. Zeus stopped the cycle of recurrent micro-tears. Best recovery investment I've made.",
+        "author": "Blake W. — Verified Buyer",
+        "rating": "★★★★★ (5.0 / 5)",
+        "quote": "The multi-vector approach of Achilles covers every base: growth, repair, gut health, and fat loss. Absolute masterclass in stack design."
     },
     {
         "num": 22,
-        "author": "Craig V. — Verified Buyer",
+        "author": "Sean M. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Systemic inflammation wiped out. Felt the systemic decline in chronic stiffness across my spine and hands within ten days. Everything just moves with less mechanical resistance.",
+        "quote": "Rapid delivery right to my doorstep and automated refills mean I never miss a dose. Fantastic customer support and clinical oversight."
     },
     {
         "num": 23,
-        "author": "Phil G. — Verified Buyer",
-        "rating": "★★★★☆ (4.9 / 5)",
-        "quote": "BPC-157 gastric and joint benefits. Not only did my shoulder heal, but mild reflux and gut sensitivities also disappeared. The systemic gut-joint axis benefits are tangible.",
+        "author": "Trevor P. — Verified Buyer",
+        "rating": "★★★★★ (5.0 / 5)",
+        "quote": "My IGF-1 levels moved right into the optimal anabolic window. Lean mass gains have been steady and clean."
     },
     {
         "num": 24,
-        "author": "Trevor N. — Verified Buyer",
-        "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Exceptional cellular turnaround. At 46, recovery was taking too long. This protocol restored my ability to train hard on back-to-back days without cumulative fatigue.",
+        "author": "Brody L. — Verified Buyer",
+        "rating": "★★★★☆ (4.9 / 5)",
+        "quote": "Noticeably faster healing on soft tissue niggles. I used to nurse pulled hamstrings for weeks; now turnaround time is minimal."
     },
     {
         "num": 25,
-        "author": "Austin D. — Verified Buyer",
+        "author": "Gavin N. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Immediate reduction in soft tissue soreness. The cellular recovery vector alone justifies the monthly cost. My joints haven't felt this resilient since my early twenties.",
+        "quote": "Retatrutide keeps cravings completely silent. Combined with HGH, my physique has leaned out dramatically without sacrificing strength."
     },
     {
         "num": 26,
-        "author": "Arthur P. — Verified Buyer",
+        "author": "Seth B. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Laser executive focus without caffeine jitters. Semax and Selank together are unbelievable. I manage private equity portfolios, and my ability to synthesize balance sheets under pressure with zero anxiety is unmatched.",
+        "quote": "KPV transformed my gut integrity. Digestion is smoother and my overall systemic inflammation plummeted."
     },
     {
         "num": 27,
-        "author": "Julian S. — Verified Buyer",
+        "author": "Chase V. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "High-stakes composure is next level. Selank acts like a cognitive shock absorber. During board meetings and critical negotiations, my speech latency and stress response are completely dialed.",
+        "quote": "The protocol documentation is thorough, professional, and easy to execute. High-tier service from VanguardBIO."
     },
     {
         "num": 28,
-        "author": "Dominic R. — Verified Buyer",
-        "rating": "★★★★☆ (4.9 / 5)",
-        "quote": "Working memory and BDNF boost. Noticeable improvement in short-term recall and contextual memory retention. Reading dense technical documents feels frictionless.",
+        "author": "Wyatt C. — Verified Buyer",
+        "rating": "★★★★☆ (4.8 / 5)",
+        "quote": "Solid protocol for dedicated guys looking to bypass normal aging plateaus. Great results on my 60-day blood panel."
     },
     {
         "num": 29,
-        "author": "Mitchell B. — Verified Buyer",
+        "author": "Ryder K. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Crisp mental endurance through 14-hour days. Usually by 3 PM I experience heavy cognitive fatigue. With the morning Semax/Selank routine, my focus remains sharp and steady straight through dinner.",
+        "quote": "Shoulder tendonitis that lingered for two years finally cleared up entirely. TB-500 is magic."
     },
     {
         "num": 30,
-        "author": "Siddharth N. — Verified Buyer",
-        "rating": "★★★★☆ (4.8 / 5)",
-        "quote": "Calms the nervous system without sedation. Selank’s GABAergic modulation removes the background static of anxiety without dulling my edge. You remain calm, assertive, and hyper-focused.",
+        "author": "Miles J. — Verified Buyer",
+        "rating": "★★★★★ (5.0 / 5)",
+        "quote": "Sleep scores on my wearable device jumped instantly. Deep sleep duration doubled within the first fortnight."
     },
     {
         "num": 31,
-        "author": "Warren C. — Verified Buyer",
+        "author": "Grant S. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Flow state on command. As a software architect, coding complex distributed systems requires deep flow. Semax puts me in that zone within 30 minutes of dosing.",
+        "quote": "The 503B pharmacy compounding standard is evident from the first unboxing. Pure pharmaceutical grade excellence."
     },
     {
         "num": 32,
-        "author": "Grant K. — Verified Buyer",
-        "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Speech fluency and verbal recall. Found myself recalling vocabulary, names, and metrics during presentations without the usual micro-hesitations. Executive function is noticeably elevated.",
+        "author": "Finn R. — Verified Buyer",
+        "rating": "★★★★☆ (4.9 / 5)",
+        "quote": "Incredible fat loss around the midsection while maintaining full strength on my deadlifts. Retatrutide is unmatched."
     },
     {
         "num": 33,
-        "author": "Leon M. — Verified Buyer",
-        "rating": "★★★★☆ (4.9 / 5)",
-        "quote": "Eliminated brain fog completely. Mid-morning brain fog has vanished. My mental bandwidth and ability to handle multi-threaded operational problems feels upgraded.",
+        "author": "Declan M. — Verified Buyer",
+        "rating": "★★★★★ (5.0 / 5)",
+        "quote": "Telehealth consultation was quick, professional, and thorough. The expert tailored my titration schedule perfectly."
     },
     {
         "num": 34,
-        "author": "Harrison F. — Verified Buyer",
+        "author": "Kade T. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Cortisol mitigation under stress. High-stress deadlines used to spike my heart rate and cause paralysis by analysis. The protocol keeps my physiology completely level-headed.",
+        "quote": "My recovery ceiling has doubled. I can train harder, more frequently, without hitting central nervous system burnout."
     },
     {
         "num": 35,
-        "author": "Vincent T. — Verified Buyer",
-        "rating": "★★★★☆ (4.8 / 5)",
-        "quote": "Clean cognitive performance. No crash, no racing pulse, no appetite destruction like commercial stimulants. Just crystal-clear executive decision-making all day.",
+        "author": "Zane H. — Verified Buyer",
+        "rating": "★★★★★ (5.0 / 5)",
+        "quote": "Gut health, body fat reduction, and accelerated tendon repair all rolled into one cohesive protocol. Incredible formulation."
     },
     {
         "num": 36,
-        "author": "Gabriel W. — Verified Buyer",
-        "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Deep work capacity unlocked. My deep work hours logged per week doubled from 15 to 30. The mental stamina provided by the peptide pairing is remarkable.",
+        "author": "Paxton W. — Verified Buyer",
+        "rating": "★★★★☆ (4.8 / 5)",
+        "quote": "Noticeable drop in recovery downtime after heavy leg volume. Highly recommend to serious competitors."
     },
     {
         "num": 37,
-        "author": "Russell H. — Verified Buyer",
+        "author": "Reid B. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Neuroprotective and nootropic synergy. The clinical synergy between BDNF upregulation and anxiolytic modulation is evident. It's the most effective nootropic stack I've ever experienced.",
+        "quote": "The HGH component keeps skin texture tight and muscle fullness dialed in 24/7. Outstanding physical results."
     },
     {
         "num": 38,
-        "author": "Eliot J. — Verified Buyer",
-        "rating": "★★★★☆ (4.9 / 5)",
-        "quote": "Decision fatigue is gone. By evening, I used to have zero bandwidth left for personal decisions. Now my cognitive battery still has 40% left at 8 PM.",
+        "author": "Spencer D. — Verified Buyer",
+        "rating": "★★★★★ (5.0 / 5)",
+        "quote": "KPV solved my stubborn digestive inflammation. I feel lighter, leaner, and absorb nutrients far more efficiently."
     },
     {
         "num": 39,
-        "author": "Cole S. — Verified Buyer",
+        "author": "Knox L. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Unshakable emotional regulation. Managing enterprise disputes requires patience. Selank completely flattens volatile emotional spikes under stress.",
+        "quote": "Retatrutide plus HGH is the ultimate body recomposition stack. Every single biohacking metric improved."
     },
     {
         "num": 40,
-        "author": "Patrick D. — Verified Buyer",
-        "rating": "★★★★☆ (4.8 / 5)",
-        "quote": "Rapid task switching. Going from engineering reviews to legal contracts used to drain me. Context-switching latency is almost imperceptible now.",
+        "author": "Colt P. — Verified Buyer",
+        "rating": "★★★★☆ (4.9 / 5)",
+        "quote": "Smooth onboarding process and rapid shipping. VanguardBIO delivers top-tier clinical grade compounds."
     },
     {
         "num": 41,
-        "author": "Nolan A. — Verified Buyer",
+        "author": "Jett R. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Cognitive processing speed is up. Complex numerical calculations and mental modeling feel faster. Processing speed and visual data intake have noticeably accelerated.",
+        "quote": "Elbow and knee inflammation completely mitigated. I'm lifting heavier at 42 than I did at 28."
     },
     {
         "num": 42,
-        "author": "Damian V. — Verified Buyer",
+        "author": "Rory S. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Sharp morning transition. I used to take an hour and three espressos to boot up. The Zeus morning sequence has me fully operational in under ten minutes.",
+        "quote": "The sleep enhancement alone makes the Achilles protocol worth every penny. Unbroken 8 hours every single night."
     },
     {
         "num": 43,
-        "author": "Stuart L. — Verified Buyer",
-        "rating": "★★★★☆ (4.9 / 5)",
-        "quote": "Elevated mental acuity. The signal-to-noise ratio in strategic planning sessions has dramatically improved. My thinking feels streamlined and direct.",
+        "author": "Brooks K. — Verified Buyer",
+        "rating": "★★★★★ (5.0 / 5)",
+        "quote": "Visceral fat melted away while lean tissue stayed completely locked in. True clinical recomposition."
     },
     {
         "num": 44,
-        "author": "Bryce K. — Verified Buyer",
-        "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Subtle, non-stimulant brilliance. It doesn’t feel like caffeine or amphetamines. It feels like your baseline intelligence and emotional balance have simply been optimized.",
+        "author": "Rhett M. — Verified Buyer",
+        "rating": "★★★★☆ (4.8 / 5)",
+        "quote": "Comprehensive documentation made execution foolproof. Great support team behind the scenes."
     },
     {
         "num": 45,
-        "author": "Geoffrey R. — Verified Buyer",
-        "rating": "★★★★☆ (4.8 / 5)",
-        "quote": "Excellent stress resilience. Handled a major regulatory audit with zero panic. My heart rate stayed low and strategic clarity stayed pristine.",
+        "author": "Zander H. — Verified Buyer",
+        "rating": "★★★★★ (5.0 / 5)",
+        "quote": "TB-500 healed my chronic Achilles tendinopathy. The stack lives up directly to its namesake."
     },
     {
         "num": 46,
-        "author": "Felix P. — Verified Buyer",
+        "author": "Dax W. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Sustained attention span. Can sit through four-hour strategic review sessions without my mind wandering once. Focus and working memory are top tier.",
+        "quote": "Appetite suppression from Retatrutide is smooth, clean, and completely devoid of jittery side effects."
     },
     {
         "num": 47,
-        "author": "Zachary U. — Verified Buyer",
+        "author": "Stetson B. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Unlocked complex problem-solving. Felt an immediate boost in synthesizing disparate technical concepts. Semax’s BDNF action is tangible in complex analytical tasks.",
+        "quote": "Gut barrier function improved markedly. Bloating is entirely gone and training pumps are fuller."
     },
     {
         "num": 48,
-        "author": "Christian G. — Verified Buyer",
+        "author": "Diesel T. — Verified Buyer",
         "rating": "★★★★☆ (4.9 / 5)",
-        "quote": "Calm executive presence. Colleagues noted how composed and direct my communication became under intense pressure. Selank delivers on its promise.",
+        "quote": "Top-tier pharmaceutical quality. You can tell real clinical oversight went into formulating this stack."
     },
     {
         "num": 49,
-        "author": "Marshall B. — Verified Buyer",
+        "author": "Maverick C. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Clear thinking, zero afternoon slump. Cut my daily caffeine intake in half. The natural neurotransmitter support keeps alertness perfectly consistent.",
+        "quote": "My recovery metrics across my fitness tracker have never looked this green. Outstanding stack."
     },
     {
         "num": 50,
-        "author": "Ian Q. — Verified Buyer",
+        "author": "Cash V. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "The gold standard for cognitive protocols. Having Semax and Selank sequenced with physical recovery peptides creates a total mind-body equilibrium that is hard to describe until you feel it.",
+        "quote": "The dual-vector recomposition effect of HGH and Retatrutide is unmatched by anything else on the market."
     },
     {
         "num": 51,
-        "author": "Nathaniel K. — Verified Buyer",
+        "author": "Ridge F. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Retatrutide melted visceral fat. The triple agonist mechanism of Retatrutide is unreal. Dropped 14 lbs of stubborn visceral fat in 8 weeks while maintaining all lean muscle mass.",
+        "quote": "Joint aches from heavy lifting vanished within three weeks. TB-500 is an absolute powerhouse."
     },
     {
         "num": 52,
-        "author": "Ross M. — Verified Buyer",
-        "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Stage 4 deep sleep doubled. According to my Whoop and Oura data, slow-wave deep sleep went from 42 minutes to 1 hour and 38 minutes average. Wake up feeling genuinely restored.",
+        "author": "Flint D. — Verified Buyer",
+        "rating": "★★★★☆ (4.8 / 5)",
+        "quote": "Clear instructions, fast delivery, and premium packaging. Highly satisfied with the Achilles Protocol."
     },
     {
         "num": 53,
-        "author": "Derek F. — Verified Buyer",
-        "rating": "★★★★☆ (4.9 / 5)",
-        "quote": "Appetite suppression without nausea. Unlike older GLP-1s that caused constant stomach upset, Retatrutide titration was smooth. Appetite noise is silenced, and metabolic rate feels elevated.",
+        "author": "Boone L. — Verified Buyer",
+        "rating": "★★★★★ (5.0 / 5)",
+        "quote": "Sleep architecture and cognitive clarity both received massive boosts. Waking up dialed in every morning."
     },
     {
         "num": 54,
-        "author": "Aaron Z. — Verified Buyer",
+        "author": "Thad P. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Exogenous HGH delivers real pumps and fullness. Muscles stay dense, hydrated, and full around the clock. The direct somatropin pulse bypasses pituitary fatigue completely.",
+        "quote": "Visceral adipose tissue dropped significantly on my latest scan. Retatrutide is a marvel of modern biotechnology."
     },
     {
         "num": 55,
-        "author": "Clint W. — Verified Buyer",
-        "rating": "★★★★☆ (4.8 / 5)",
-        "quote": "Fasting insulin and HOMA-IR plummeted. My fasting glucose stabilized at 84 mg/dL and fasting insulin dropped from 12 to 4.2. Insulin sensitivity and metabolic flexibility are night and day.",
+        "author": "Briggs M. — Verified Buyer",
+        "rating": "★★★★★ (5.0 / 5)",
+        "quote": "KPV sorted out my chronic gut inflammation. Digestion is effortless now."
     },
     {
         "num": 56,
-        "author": "Simon J. — Verified Buyer",
-        "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Skin elasticity and body recomposition. At 49, my skin tightness improved, vascularity returned across my arms and abdomen, and waist size dropped two inches in six weeks.",
+        "author": "Hank R. — Verified Buyer",
+        "rating": "★★★★☆ (4.9 / 5)",
+        "quote": "Professional telehealth review and custom dosing guidance made getting started seamless."
     },
     {
         "num": 57,
-        "author": "Braden S. — Verified Buyer",
+        "author": "Wade S. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Unbelievable body recomposition. In two months: lost 4.5% body fat and gained 3 pounds of lean tissue on DEXA scan. Retatrutide plus HGH creates the ultimate partitioning agent.",
+        "quote": "Muscle fullness and vascularity increased noticeably while body fat peeled away effortlessly."
     },
     {
         "num": 58,
-        "author": "Kurt D. — Verified Buyer",
-        "rating": "★★★★☆ (4.9 / 5)",
-        "quote": "Zero food cravings. Late-night snacking impulses were completely extinguished. I eat my planned protein and clean carbs and have zero obsessive thoughts about sugar.",
+        "author": "Colter K. — Verified Buyer",
+        "rating": "★★★★★ (5.0 / 5)",
+        "quote": "My nagging shoulder injury finally healed after months of stalled progress. TB-500 is incredible."
     },
     {
         "num": 59,
-        "author": "Luke T. — Verified Buyer",
+        "author": "Zeb H. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "IGF-1 in optimal high-performance range. My baseline IGF-1 was 135 ng/mL. Retested at week 8 and hit 260 ng/mL. Recovery, skin quality, and workout pumps reflect the numbers.",
+        "quote": "Deep sleep recovery scores reached an all-time high. HGH delivers exactly what it promises."
     },
     {
         "num": 60,
-        "author": "Dennis E. — Verified Buyer",
+        "author": "Huck B. — Verified Buyer",
         "rating": "★★★★☆ (4.8 / 5)",
-        "quote": "Lipolysis you can visibly track. The glucagon receptor activation in Retatrutide genuinely increases calorie burn. Watched my lower abdominal fat fold shrink week after week.",
+        "quote": "Exceptional purity and professional service. VanguardBIO is heads above other suppliers."
     },
     {
         "num": 61,
-        "author": "Maxwell H. — Verified Buyer",
+        "author": "Gage W. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Sleep score consistently over 90. Deep REM and slow-wave sleep scores have never been this consistent. Pre-bed HGH administration dramatically improved my sleep architecture.",
+        "quote": "Retatrutide appetite regulation is clean and sustained. Zero energy crashes during grueling workouts."
     },
     {
         "num": 62,
-        "author": "Trevor P. — Verified Buyer",
+        "author": "Zackary T. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Lean mass retention in a caloric deficit. Ran a 600-calorie deficit for 8 weeks. Kept every ounce of bench press and squat strength thanks to the anabolic signaling of HGH.",
+        "quote": "Gut health optimization via KPV made my nutrient absorption skyrocket. Incredible physiological shift."
     },
     {
         "num": 63,
-        "author": "Chad M. — Verified Buyer",
-        "rating": "★★★★☆ (4.9 / 5)",
-        "quote": "Energy levels on Retatrutide remain high. Previous GLP-1 agonists caused lethargy. Retatrutide’s glucagon component preserves thermogenesis and daytime energy. Training output never dipped.",
+        "author": "Laramie N. — Verified Buyer",
+        "rating": "★★★★★ (5.0 / 5)",
+        "quote": "The quarterly plan is well worth it. Consistent deliveries and unmatched physical results."
     },
     {
         "num": 64,
-        "author": "Gavin L. — Verified Buyer",
-        "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Vascularity and definition emerged. Veins across my shoulders and calves that I haven't seen in a decade showed up by week six. Fat loss has been rapid and steady.",
+        "author": "Tag V. — Verified Buyer",
+        "rating": "★★★★☆ (4.9 / 5)",
+        "quote": "Joint recovery speed is phenomenal. I can push high volume without paying for it the next day."
     },
     {
         "num": 65,
-        "author": "Joel R. — Verified Buyer",
-        "rating": "★★★★☆ (4.8 / 5)",
-        "quote": "Flawless titration guide. The titration schedule for Retatrutide from 2 mg upwards prevented all gastrointestinal discomfort. Telehealth medical team guided me step-by-step.",
+        "author": "Coleson J. — Verified Buyer",
+        "rating": "★★★★★ (5.0 / 5)",
+        "quote": "HGH and Retatrutide working together is like cheating physics. Lean mass up, fat mass down."
     },
     {
         "num": 66,
-        "author": "Shane O. — Verified Buyer",
+        "author": "Stran P. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Restful sleep and waking readiness. Wake up feeling like an electric battery fully charged. No grogginess, no lingering fatigue, just immediate physical readiness.",
+        "quote": "Third-party COAs gave me total trust, and the actual results on my bloodwork confirmed every claim."
     },
     {
         "num": 67,
-        "author": "Peter V. — Verified Buyer",
+        "author": "Jent M. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Dropped 3 pant sizes while building delts. The body composition delta is crazy. My waist went from 36 down to 33, while my shoulders and traps filled out significantly.",
+        "quote": "KPV cleared up my GI distress completely. Systemic inflammation markers dropped across the board."
     },
     {
         "num": 68,
-        "author": "Corey B. — Verified Buyer",
-        "rating": "★★★★☆ (4.9 / 5)",
-        "quote": "Satiety signaling calibrated perfectly. Portion control is effortless. I feel fully satisfied on moderate portions, which made adherence to my nutrition plan 100% compliant.",
+        "author": "Crewe L. — Verified Buyer",
+        "rating": "★★★★☆ (4.8 / 5)",
+        "quote": "Solid support team and fast shipping. Protocols are clearly laid out for easy self-administration."
     },
     {
         "num": 69,
-        "author": "Blake N. — Verified Buyer",
+        "author": "Slater H. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Fast recovery from intense cardio. Ran a half marathon and normally would be wrecked for three days. With Zeus, my legs felt fresh by Tuesday afternoon.",
+        "quote": "Achilles protocol restored my connective tissue integrity after years of heavy powerlifting."
     },
     {
         "num": 70,
-        "author": "Quinton K. — Verified Buyer",
-        "rating": "★★★★☆ (4.8 / 5)",
-        "quote": "Noticeable thermogenic effect. You can feel the thermogenic shift within 24 hours of the weekly Retatrutide dose. Body heat during cardio sessions is noticeably higher.",
+        "author": "Bodie K. — Verified Buyer",
+        "rating": "★★★★★ (5.0 / 5)",
+        "quote": "Sleep architecture is pristine. Waking up refreshed before my 5 AM training session every single day."
     },
     {
         "num": 71,
-        "author": "Darren Y. — Verified Buyer",
+        "author": "Taggart R. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Morning resting heart rate dropped. As body fat came off and sleep deepened, my resting heart rate dropped from 62 bpm down to 51 bpm over two months.",
+        "quote": "Visceral fat reduction was immediately apparent on my DEXA scans. Retatrutide is state-of-the-art."
     },
     {
         "num": 72,
-        "author": "Seth C. — Verified Buyer",
-        "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Complete physical recomposition. This isn’t just weight loss; it’s true body reshaping. Fat falls off while muscle fibers maintain full glycogen storage and roundness.",
+        "author": "Bridger S. — Verified Buyer",
+        "rating": "★★★★☆ (4.9 / 5)",
+        "quote": "Fantastic stack design. Combining repair, growth, and metabolism into one monthly order is brilliant."
     },
     {
         "num": 73,
-        "author": "Mitchell G. — Verified Buyer",
-        "rating": "★★★★☆ (4.9 / 5)",
-        "quote": "Nails and hair grew faster. An unexpected side effect of HGH and enhanced recovery was how fast my hair and nails began growing. Overall vitality is through the roof.",
+        "author": "Colter D. — Verified Buyer",
+        "rating": "★★★★★ (5.0 / 5)",
+        "quote": "TB-500 fixed my nagging patellar tendinopathy. Full range of motion restored."
     },
     {
         "num": 74,
-        "author": "Colby W. — Verified Buyer",
+        "author": "Rigg M. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Flawless metabolic reset. My lipid panel improved: triglycerides down 45 points, HDL up 8 points. Retatrutide works miracles on systemic metabolic parameters.",
+        "quote": "HGH elevation keeps my muscle fullness peaked and skin quality immaculate. Unbelievable compound."
     },
     {
         "num": 75,
-        "author": "Adam T. — Verified Buyer",
+        "author": "Onyx W. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "The most complete physique enhancement tool. Combining cellular repair, cognitive sharpness, growth hormone, and triple-receptor fat loss in one box is pure genius. Nothing else compares.",
+        "quote": "KPV healed my gut lining. Nutrient utilization feels noticeably more efficient."
     },
     {
         "num": 76,
-        "author": "Dr. Robert M., MD — Verified Buyer",
-        "rating": "★★★★★ (5.0 / 5)",
-        "quote": "503B pharmacy grade standards are legitimate. As an internal medicine physician, I refused to touch overseas research chemicals. VanguardBIO’s 503B sourcing and transparent Certificates of Analysis meet true clinical standards.",
+        "author": "Pike V. — Verified Buyer",
+        "rating": "★★★★☆ (4.8 / 5)",
+        "quote": "Professional consultation ensured my dosing was dialed right from day one. Great experience."
     },
     {
         "num": 77,
-        "author": "Kent S. — Verified Buyer",
+        "author": "Remington B. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Fast, temperature-controlled delivery. Arrived in insulated packaging with cold packs still frozen 48 hours after dispatch. Lyophilized peptides were pristine with zero degradation.",
+        "quote": "Retatrutide suppresses cravings effortlessly while preserving full training intensity."
     },
     {
         "num": 78,
-        "author": "Dean J. — Verified Buyer",
-        "rating": "★★★★☆ (4.8 / 5)",
-        "quote": "The reconstitution guide made it foolproof. Was slightly intimidated by reconstituting with bacteriostatic water. The step-by-step PDF instructions and video breakdown made it simple in 90 seconds.",
+        "author": "Hays H. — Verified Buyer",
+        "rating": "★★★★★ (5.0 / 5)",
+        "quote": "Recovery metrics across my Oura ring have never been higher. Deep sleep and REM sleep both doubled."
     },
     {
         "num": 79,
-        "author": "Gregory L. — Verified Buyer",
+        "author": "Jovanny C. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Telehealth consultation was thorough. The medical provider actually reviewed my comprehensive metabolic panel and previous medical history before prescribing. Extremely professional clinical intake.",
+        "quote": "The 503B pharmacy compounding standard gives absolute confidence in product safety and purity."
     },
     {
         "num": 80,
-        "author": "Tobias C. — Verified Buyer",
+        "author": "Mac K. — Verified Buyer",
         "rating": "★★★★☆ (4.9 / 5)",
-        "quote": "Auto-refill arrived before I ran out. Subscription timing is dialed in. Month two arrived four business days before my current supply expired. Zero protocol interruption.",
+        "quote": "Phenomenal body recomposition results. Dropped 4% body fat while adding lean mass."
     },
     {
         "num": 81,
-        "author": "Lance B. — Verified Buyer",
+        "author": "Gideon T. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Painless subcutaneous administration. The 29-gauge 0.5-inch insulin syringes make injections completely painless. You don't even feel it entering the abdomen or thigh.",
+        "quote": "Chronic elbow inflammation resolved completely. TB-500 is a mandatory addition for serious lifters."
     },
     {
         "num": 82,
-        "author": "Franklin D. — Verified Buyer",
+        "author": "Thatcher R. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Pristine HPLC lab testing. Requested the HPLC purity sheet for my lot number and support provided it in two hours. Over 99% verified purity. That's real accountability.",
+        "quote": "Gut health support via KPV eliminated my post-workout GI distress entirely."
     },
     {
         "num": 83,
-        "author": "Wade E. — Verified Buyer",
-        "rating": "★★★★☆ (4.8 / 5)",
-        "quote": "Clear labeling and dosing cards. Every vial is color-coded with exact unit markings on the syringe cheat sheet. Impossible to mess up dosing calculations.",
+        "author": "Sutter M. — Verified Buyer",
+        "rating": "★★★★★ (5.0 / 5)",
+        "quote": "HGH and Retatrutide stack delivers jaw-dropping aesthetic and metabolic improvements."
     },
     {
         "num": 84,
-        "author": "Howard P. — Verified Buyer",
-        "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Clean member dashboard. Logging injection sites and monitoring weekly biomarker trends inside the VanguardBIO member portal makes staying compliant seamless.",
+        "author": "Calum S. — Verified Buyer",
+        "rating": "★★★★☆ (4.8 / 5)",
+        "quote": "Fast shipping, pristine packaging, and clear documentation. Top-tier service."
     },
     {
         "num": 85,
-        "author": "Brent R. — Verified Buyer",
+        "author": "Knoxley D. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Customer concierge responded in 10 minutes. Had a question regarding Selank timing with morning coffee. The clinical support desk replied promptly with exact pharmacology recommendations.",
+        "quote": "My recovery time between heavy deadlift sessions is practically nonexistent now."
     },
     {
         "num": 86,
-        "author": "Leonidas K. — Verified Buyer",
-        "rating": "★★★★☆ (4.9 / 5)",
-        "quote": "Elite packaging and presentation. Unboxing feels like receiving medical equipment from the future. Heavy vials, vacuum-sealed seals, clean bacteriostatic water vials.",
+        "author": "Vance W. — Verified Buyer",
+        "rating": "★★★★★ (5.0 / 5)",
+        "quote": "Retatrutide is lightyears ahead of older GLP-1s. Zero fatigue, maximum fat loss."
     },
     {
         "num": 87,
-        "author": "Sean W. — Verified Buyer",
+        "author": "Damon H. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "No sketchy grey-market mystery powder. Peace of mind knowing this is made in an FDA-inspected 503B facility cannot be overstated. You know exactly what’s going into your body.",
+        "quote": "Telehealth onboarding was seamless and professional. Health expert oversight is top quality."
     },
     {
         "num": 88,
-        "author": "Keith G. — Verified Buyer",
-        "rating": "★★★★☆ (4.8 / 5)",
-        "quote": "Smooth subscription management. Pause, skip, or modify is available right in the portal. No predatory cancellation roadblocks. A top-tier professional company.",
+        "author": "Corbin B. — Verified Buyer",
+        "rating": "★★★★☆ (4.9 / 5)",
+        "quote": "Sleep quality and joint resilience improved dramatically within the first two weeks."
     },
     {
         "num": 89,
-        "author": "Malcolm S. — Verified Buyer",
+        "author": "Lawson V. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Complete onboarding ecosystem. From the doctor call to the delivery box and injection walkthrough, the user experience is effortless for beginners.",
+        "quote": "Systemic inflammation markers dropped significantly on my quarterly bloodwork. Incomparable stack."
     },
     {
         "num": 90,
-        "author": "Timothy H. — Verified Buyer",
+        "author": "Leopold P. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Doctor spent 20 minutes explaining mechanisms. My telehealth intake doctor didn't just rubber-stamp the script; he walked through the synergy of Selank, Semax, and GH in detail.",
+        "quote": "Lean tissue retention while cutting body fat has never been easier. Brilliant protocol design."
     },
     {
         "num": 91,
-        "author": "Scott B. — Verified Buyer",
-        "rating": "★★★★☆ (4.9 / 5)",
-        "quote": "Medical grade reconstitution supplies. The included alcohol prep pads, mixing syringes, and needles are sterile hospital-grade supplies. No need to order external equipment.",
+        "author": "Abel K. — Verified Buyer",
+        "rating": "★★★★★ (5.0 / 5)",
+        "quote": "KPV sorted out my gut permeability issues. Absorption and energy levels are through the roof."
     },
     {
         "num": 92,
-        "author": "Perry T. — Verified Buyer",
-        "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Reliable shipping notifications. Dispatched within 24 hours of physician clearance with real-time tracking updates. Packaging was completely discreet.",
+        "author": "Soren M. — Verified Buyer",
+        "rating": "★★★★☆ (4.8 / 5)",
+        "quote": "TB-500 healed my lingering rotator cuff strain faster than anything I've tried before."
     },
     {
         "num": 93,
-        "author": "Jarrett V. — Verified Buyer",
-        "rating": "★★★★☆ (4.8 / 5)",
-        "quote": "Accurate dosing concentrations. Volume calculations match the peptide mass down to the microgram. Solution clears instantly upon reconstitution with zero residue.",
+        "author": "Orion R. — Verified Buyer",
+        "rating": "★★★★★ (5.0 / 5)",
+        "quote": "HGH sleep benefits kicked in on night three. Deep sleep metrics doubled instantly."
     },
     {
         "num": 94,
-        "author": "Owen N. — Verified Buyer",
+        "author": "Stellan H. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "High-end clinical support. Needed an adjustment on my Retatrutide titration schedule at week six. The medical provider responded within hours with updated guidelines.",
+        "quote": "Retatrutide appetite control is effortless. Visceral fat melted off my midsection."
     },
     {
         "num": 95,
-        "author": "Byron M. — Verified Buyer",
+        "author": "Magnus S. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Worth every penny of the $549. Trying to source six separate 503B-grade compounds individually with physician visits would cost well over $1,200/month. The pricing is unbeatable.",
+        "quote": "Professional 503B compounding standards give complete peace of mind. Outstanding results."
     },
     {
         "num": 96,
-        "author": "Carl F. — Verified Buyer",
+        "author": "Evander W. — Verified Buyer",
         "rating": "★★★★☆ (4.9 / 5)",
-        "quote": "Zero injection site irritation. Because the compounds are ultra-pure and pH-balanced properly, there's zero stinging, welts, or post-injection redness.",
+        "quote": "Recovery ceiling is doubled. I'm training with intensity I haven't seen in a decade."
     },
     {
         "num": 97,
-        "author": "Roger K. — Verified Buyer",
+        "author": "Alaric C. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Seamless 12-week review. My 12-week telehealth review looked at real biomarker deltas. We adjusted dosing based on data, not guesswork.",
+        "quote": "The quarterly plan is seamless. Automatic refills arrive right on schedule."
     },
     {
         "num": 98,
-        "author": "Warren T. — Verified Buyer",
-        "rating": "★★★★☆ (4.8 / 5)",
-        "quote": "Straightforward protocol schedule. Morning: Semax/Selank/BPC. Evening: HGH. Twice weekly: TB-500. Weekly: Retatrutide. It becomes second nature in three days.",
+        "author": "Dorian B. — Verified Buyer",
+        "rating": "★★★★★ (5.0 / 5)",
+        "quote": "Joint mobility in my knees and shoulders is fully restored. TB-500 is essential."
     },
     {
         "num": 99,
-        "author": "Zack L. — Verified Buyer",
+        "author": "Ambrose K. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Transparent operations. Every batch number matches the COA provided upon request. True medical standard from end to end.",
+        "quote": "Gut health and nutrient partitioning improved dramatically thanks to KPV."
     },
     {
         "num": 100,
-        "author": "Neil D. — Verified Buyer",
-        "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Exemplary pharmaceutical logistics. Living on the West Coast, delivery was here in two days. Cold integrity was completely intact. 10/10 execution.",
+        "author": "Lysander M. — Verified Buyer",
+        "rating": "★★★★☆ (4.8 / 5)",
+        "quote": "Exceptional body recomposition stack. Lean mass up, fat mass down cleanly."
     },
     {
         "num": 101,
-        "author": "Alexander G. — Verified Buyer",
+        "author": "Caspian T. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Total system upgrade across every metric. At 12 weeks, my body fat is at 10.5%, sleep average is 8.5 hours, my knee tendonitis is cured, and my mental focus is sharper than ever. Zeus is the real deal.",
+        "quote": "Retatrutide and HGH synergy is unmatched. DEXA scans confirm elite visceral fat loss."
     },
     {
         "num": 102,
-        "author": "Brian J. — Verified Buyer",
+        "author": "Thane R. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Synergistic design works better than individual peptides. I took BPC-157 alone in the past. Having it integrated with TB-500, HGH, and nootropics produces a compounding effect that single compounds can't match.",
+        "quote": "Telehealth consultation was thorough and expert-led. Protocol guidance is crystal clear."
     },
     {
         "num": 103,
-        "author": "Christian R. — Verified Buyer",
-        "rating": "★★★★☆ (4.9 / 5)",
-        "quote": "Replaced multiple standalone supplements. Canceled three different nootropic subscriptions, joint powders, and fat burners. The Zeus protocol covers every vector with clinical efficacy.",
+        "author": "Viggo S. — Verified Buyer",
+        "rating": "★★★★★ (5.0 / 5)",
+        "quote": "Sleep architecture and recovery metrics reached all-time personal bests."
     },
     {
         "num": 104,
-        "author": "Devon S. — Verified Buyer",
-        "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Transformed my executive output. Operating as a startup CEO, you need stamina, cognitive clarity, and physical resilience. This protocol gives me the biological bandwidth to work 70 hours a week.",
+        "author": "Leif H. — Verified Buyer",
+        "rating": "★★★★☆ (4.9 / 5)",
+        "quote": "Nagging connective tissue issues vanished by week four. Incredible healing protocol."
     },
     {
         "num": 105,
-        "author": "Evan H. — Verified Buyer",
-        "rating": "★★★★☆ (4.8 / 5)",
-        "quote": "Biomarkers speak for themselves. Blood pressure dropped to 116/74, resting heart rate down to 49, fasting glucose down to 82, and free testosterone/IGF-1 ratio optimized.",
+        "author": "Ronan W. — Verified Buyer",
+        "rating": "★★★★★ (5.0 / 5)",
+        "quote": "Systemic inflammation plummeted. My joints feel bulletproof during heavy sessions."
     },
     {
         "num": 106,
-        "author": "Felix W. — Verified Buyer",
+        "author": "Torin B. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "8 weeks in: absolute physical transformation. Lost 16 lbs on the scale, but gained noticeable muscle fullness. My bench press climbed 20 lbs while my waist shrank 3 inches.",
+        "quote": "KPV solved my chronic gut inflammation. Digestion is smooth and effortless."
     },
     {
         "num": 107,
-        "author": "Gideon M. — Verified Buyer",
+        "author": "Stellan M. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "The mental and physical interplay is incredible. When your body doesn't hurt and your sleep is deep, your brain operates at 100%. The synergy between the 4 vectors is mathematically dialed in.",
+        "quote": "The 503B pharmacy quality is evident in every single injection. Flawless purity."
     },
     {
         "num": 108,
-        "author": "Hugh C. — Verified Buyer",
-        "rating": "★★★★☆ (4.9 / 5)",
-        "quote": "Consistent performance every single day. Eliminated the good day / bad day swings. My training output, cognitive focus, and mood remain rock-solid seven days a week.",
+        "author": "Kian C. — Verified Buyer",
+        "rating": "★★★★☆ (4.8 / 5)",
+        "quote": "Appetite suppression is smooth and sustained. Retatrutide is lightyears ahead."
     },
     {
         "num": 109,
-        "author": "Isaac K. — Verified Buyer",
+        "author": "Idris K. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Peak biohacking executed properly. I've spent a decade experimenting with longevity protocols. VanguardBIO has created the definitive integrated human performance package.",
+        "quote": "HGH elevation keeps muscle fullness dialed in 24/7. Outstanding physical results."
     },
     {
         "num": 110,
-        "author": "Jonah T. — Verified Buyer",
-        "rating": "★★★★☆ (4.8 / 5)",
-        "quote": "Zero burnout under heavy workload. Between marathon prep and managing corporate litigation, I should have crashed. Zeus keeps my cellular energy and recovery baseline elevated.",
+        "author": "Eoghan V. — Verified Buyer",
+        "rating": "★★★★★ (5.0 / 5)",
+        "quote": "Recovery time between heavy leg days cut in half. TB-500 is a miracle worker."
     },
     {
         "num": 111,
-        "author": "Kieran B. — Verified Buyer",
+        "author": "Cillian R. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "True biological age reduction. My biological age methylation test showed a 3.2-year reversal after 90 days on Zeus. The epigenetic and recovery benefits are very real.",
+        "quote": "Visceral fat melted away while lean tissue stayed completely intact. True recomposition."
     },
     {
         "num": 112,
-        "author": "Leland P. — Verified Buyer",
-        "rating": "★★★★★ (5.0 / 5)",
-        "quote": "The confidence of complete recovery. I can go all-out in the gym knowing my connective tissue and muscle fibers will be completely repaired by the next morning.",
+        "author": "Tadhg P. — Verified Buyer",
+        "rating": "★★★★☆ (4.9 / 5)",
+        "quote": "Comprehensive documentation made execution foolproof. Great support team."
     },
     {
         "num": 113,
-        "author": "Micah D. — Verified Buyer",
-        "rating": "★★★★☆ (4.9 / 5)",
-        "quote": "The ultimate anti-aging stack for men over 40. Turning 45 felt like hitting a wall. Zeus flipped the switch back. Lean mass, fast recovery, and sharp cognition returned immediately.",
+        "author": "Fionn M. — Verified Buyer",
+        "rating": "★★★★★ (5.0 / 5)",
+        "quote": "Deep sleep duration doubled in week one. Waking up fully restored every single morning."
     },
     {
         "num": 114,
-        "author": "Nico S. — Verified Buyer",
+        "author": "Darragh S. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "High-stress lifestyle solution. Living on red-eye flights and high-stakes meetings usually destroys your physiology. Zeus keeps my immune system, gut, and brain locked in.",
+        "quote": "Gut health optimization via KPV made my nutrient absorption skyrocket."
     },
     {
         "num": 115,
-        "author": "Orson F. — Verified Buyer",
+        "author": "Oisin H. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Pristine energy curve throughout the day. No erratic spikes or crashes. Steady, calm, clean output from 6:00 AM to 10:30 PM, followed by deep restorative sleep.",
+        "quote": "Third-party HPLC testing reports gave me total confidence. Results on bloodwork confirmed it."
     },
     {
         "num": 116,
-        "author": "Pierce V. — Verified Buyer",
+        "author": "Cormac B. — Verified Buyer",
         "rating": "★★★★☆ (4.8 / 5)",
-        "quote": "Joint durability during heavy squats. Squatting 405 lbs at age 52 without knee wraps or lingering hip pain is proof enough. The cellular recovery vector works wonders.",
+        "quote": "Solid protocol for dedicated guys looking to bypass normal aging plateaus."
     },
     {
         "num": 117,
-        "author": "Quincy R. — Verified Buyer",
+        "author": "Declan W. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Phenomenal muscle retention on cuts. Dropping body fat used to make me flat and weak. With Retatrutide paired with HGH, I stayed full, vascular, and strong throughout the cut.",
+        "quote": "Shoulder tendonitis that lingered for two years finally cleared up entirely."
     },
     {
         "num": 118,
-        "author": "Reid W. — Verified Buyer",
-        "rating": "★★★★☆ (4.9 / 5)",
-        "quote": "Brain fog and fatigue completely gone. I haven't felt this lucid, sharp, and physically capable since college. It clears out all the physiological drag slowing you down.",
+        "author": "Ronan K. — Verified Buyer",
+        "rating": "★★★★★ (5.0 / 5)",
+        "quote": "Retatrutide keeps cravings completely silent while maintaining full training power."
     },
     {
         "num": 119,
-        "author": "Sterling H. — Verified Buyer",
+        "author": "Bane V. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Clinical excellence delivered monthly. The auto-refill, telehealth oversight, and 503B pharmacy quality make this the most streamlined medical wellness protocol on the market.",
+        "quote": "Professional telehealth consultation and custom dosing guidance made getting started seamless."
     },
     {
         "num": 120,
-        "author": "Tanner M. — Verified Buyer",
-        "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Complete physical overhaul. Noticeable fat loss across my midsection, veins showing on my lower abs, and zero tendinitis in my elbows. Best shape of my life.",
+        "author": "Alistair T. — Verified Buyer",
+        "rating": "★★★★☆ (4.9 / 5)",
+        "quote": "Recovery metrics across my wearable device have never looked this green."
     },
     {
         "num": 121,
-        "author": "Ulysses K. — Verified Buyer",
-        "rating": "★★★★☆ (4.8 / 5)",
-        "quote": "High compliance due to simple routine. The 90-second daily routine is so fast and pain-free that staying 100% compliant for 90 days was effortless.",
+        "author": "Lachlan R. — Verified Buyer",
+        "rating": "★★★★★ (5.0 / 5)",
+        "quote": "The dual-vector recomposition effect of HGH and Retatrutide is unmatched."
     },
     {
         "num": 122,
-        "author": "Vance L. — Verified Buyer",
+        "author": "Maddox S. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Restored athletic explosiveness. Sprint times and vertical jump height both increased. The tendon stiffness and cellular recovery allow for true athletic power output.",
+        "quote": "Joint aches from heavy lifting vanished within three weeks. TB-500 is incredible."
     },
     {
         "num": 123,
-        "author": "Wyatt C. — Verified Buyer",
+        "author": "Zayn H. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "My wife noticed the change immediately. Better mood, calmer temperament under pressure, leaner physique, and deeper sleep. The positive changes are obvious to everyone around me.",
+        "quote": "Clear instructions, fast delivery, and premium packaging. Highly satisfied."
     },
     {
         "num": 124,
-        "author": "Xander B. — Verified Buyer",
-        "rating": "★★★★☆ (4.9 / 5)",
-        "quote": "Deep restorative rest every night. The HGH somatropin pulse before bed produces vivid dreams and heavy slow-wave recovery. I wake up energized before my alarm rings.",
+        "author": "Kyson B. — Verified Buyer",
+        "rating": "★★★★☆ (4.8 / 5)",
+        "quote": "Sleep architecture and cognitive clarity both received massive boosts."
     },
     {
         "num": 125,
-        "author": "York T. — Verified Buyer",
+        "author": "Ryker M. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Clean metabolic shift. My fasting glucose dropped from 104 to 86 in 30 days. Retatrutide’s glucagon activation is the future of metabolic medicine.",
+        "quote": "Visceral adipose tissue dropped significantly on my latest scan. Retatrutide is elite."
     },
     {
         "num": 126,
-        "author": "Zane D. — Verified Buyer",
+        "author": "Zion W. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Superior to all competitors. Other peptide clinics charge double and send unregulated vials. VanguardBIO’s 503B sourcing and clinical sequencing put them in a class of their own.",
+        "quote": "KPV sorted out my chronic gut inflammation. Digestion is effortless now."
     },
     {
         "num": 127,
-        "author": "Harrison E. — Verified Buyer",
-        "rating": "★★★★☆ (4.8 / 5)",
-        "quote": "Accelerated workout adaptation. I can handle 20 hard sets of pressing and show up two days later ready to hit shoulders again. My recovery ceiling has reset entirely.",
+        "author": "Koa K. — Verified Buyer",
+        "rating": "★★★★★ (5.0 / 5)",
+        "quote": "Professional telehealth review and custom dosing guidance made execution smooth."
     },
     {
         "num": 128,
-        "author": "Callum R. — Verified Buyer",
-        "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Peak cognitive and physical synergy. Having Semax and Selank sharpen my brain while BPC, TB-500, HGH, and Retatrutide repair my body is the ultimate high-performance stack.",
+        "author": "Orson V. — Verified Buyer",
+        "rating": "★★★★☆ (4.9 / 5)",
+        "quote": "Muscle fullness and vascularity increased noticeably while body fat peeled away."
     },
     {
         "num": 129,
-        "author": "Gregory N. — Verified Buyer",
+        "author": "Sterling T. — Verified Buyer",
         "rating": "★★★★★ (5.0 / 5)",
-        "quote": "Life-changing 90-day protocol. Completed my first 90 days and just renewed for another cycle. Body fat down from 22% to 12%, joint pain eradicated, and mental clarity operating at peak level. Unquestionably worth the investment.",
+        "quote": "My nagging shoulder injury finally healed after months of stalled progress."
     },
+    {
+        "num": 130,
+        "author": "Atlas R. — Verified Buyer",
+        "rating": "★★★★★ (5.0 / 5)",
+        "quote": "Deep sleep recovery scores reached an all-time high. HGH delivers."
+    },
+    {
+        "num": 131,
+        "author": "Remi B. — Verified Buyer",
+        "rating": "★★★★★ (5.0 / 5)",
+        "quote": "Exceptional purity and professional service. VanguardBIO is heads above the rest."
+    },
+    {
+        "num": 132,
+        "author": "Soren H. — Verified Buyer",
+        "rating": "★★★★☆ (4.8 / 5)",
+        "quote": "Retatrutide appetite regulation is clean and sustained. Zero energy crashes."
+    },
+    {
+        "num": 133,
+        "author": "Titan S. — Verified Buyer",
+        "rating": "★★★★★ (5.0 / 5)",
+        "quote": "Gut health optimization via KPV made my nutrient absorption skyrocket."
+    },
+    {
+        "num": 134,
+        "author": "Zephyr M. — Verified Buyer",
+        "rating": "★★★★★ (5.0 / 5)",
+        "quote": "The quarterly plan is well worth it. Consistent deliveries and stellar results."
+    },
+    {
+        "num": 135,
+        "author": "Orion W. — Verified Buyer",
+        "rating": "★★★★★ (5.0 / 5)",
+        "quote": "Joint recovery speed is phenomenal. I can push high volume without paying for it."
+    },
+    {
+        "num": 136,
+        "author": "Cyrus K. — Verified Buyer",
+        "rating": "★★★★☆ (4.9 / 5)",
+        "quote": "HGH and Retatrutide working together is like cheating physics. Lean mass up."
+    },
+    {
+        "num": 137,
+        "author": "Darius V. — Verified Buyer",
+        "rating": "★★★★★ (5.0 / 5)",
+        "quote": "Third-party COAs gave me total trust, and bloodwork confirmed every claim."
+    },
+    {
+        "num": 138,
+        "author": "Cassian B. — Verified Buyer",
+        "rating": "★★★★★ (5.0 / 5)",
+        "quote": "KPV cleared up my GI distress completely. Systemic inflammation markers dropped."
+    },
+    {
+        "num": 139,
+        "author": "Leander T. — Verified Buyer",
+        "rating": "★★★★★ (5.0 / 5)",
+        "quote": "Solid support team and fast shipping. Protocols are clearly laid out."
+    },
+    {
+        "num": 140,
+        "author": "Evander R. — Verified Buyer",
+        "rating": "★★★★☆ (4.8 / 5)",
+        "quote": "Achilles protocol restored my connective tissue integrity after years of heavy lifting."
+    },
+    {
+        "num": 141,
+        "author": "Perseus M. — Verified Buyer",
+        "rating": "★★★★★ (5.0 / 5)",
+        "quote": "Sleep architecture is pristine. Waking up refreshed before my early workouts."
+    },
+    {
+        "num": 142,
+        "author": "Theseus H. — Verified Buyer",
+        "rating": "★★★★★ (5.0 / 5)",
+        "quote": "Visceral fat reduction was immediately apparent on DEXA. Retatrutide is state-of-the-art."
+    },
+    {
+        "num": 143,
+        "author": "Leonidas W. — Verified Buyer",
+        "rating": "★★★★★ (5.0 / 5)",
+        "quote": "Fantastic stack design. Combining repair, growth, and metabolism is brilliant."
+    },
+    {
+        "num": 144,
+        "author": "Orpheus S. — Verified Buyer",
+        "rating": "★★★★☆ (4.9 / 5)",
+        "quote": "TB-500 fixed my nagging patellar tendinopathy. Full range of motion restored."
+    },
+    {
+        "num": 145,
+        "author": "Valerius K. — Verified Buyer",
+        "rating": "★★★★★ (5.0 / 5)",
+        "quote": "HGH elevation keeps muscle fullness peaked and skin quality immaculate."
+    },
+    {
+        "num": 146,
+        "author": "Tiberius B. — Verified Buyer",
+        "rating": "★★★★★ (5.0 / 5)",
+        "quote": "KPV healed my gut lining. Nutrient utilization feels noticeably more efficient."
+    },
+    {
+        "num": 147,
+        "author": "Maximus V. — Verified Buyer",
+        "rating": "★★★★★ (5.0 / 5)",
+        "quote": "Professional consultation ensured my dosing was dialed right from day one."
+    },
+    {
+        "num": 148,
+        "author": "Aurelius T. — Verified Buyer",
+        "rating": "★★★★☆ (4.8 / 5)",
+        "quote": "Retatrutide suppresses cravings effortlessly while preserving full training intensity."
+    },
+    {
+        "num": 149,
+        "author": "Magnus R. — Verified Buyer",
+        "rating": "★★★★★ (5.0 / 5)",
+        "quote": "Recovery metrics across my Oura ring have never been higher. Deep sleep doubled."
+    },
+    {
+        "num": 150,
+        "author": "Severin H. — Verified Buyer",
+        "rating": "★★★★★ (5.0 / 5)",
+        "quote": "The 503B pharmacy compounding standard gives absolute confidence in product safety."
+    }
 ]
 
 def render_ad_image(item: dict) -> Image.Image:
@@ -944,7 +1070,7 @@ def render_ad_image(item: dict) -> Image.Image:
 @app.get("/")
 def index():
     return {
-        "service": "VanguardBIO Zeus Ad Batch Generator",
+        "service": "VanguardBIO achilles Ad Batch Generator",
         "total_reviews": len(REVIEWS),
         "preview_one": "/preview/1",
         "download_all_zip": "/generate-zip"
@@ -969,11 +1095,11 @@ def generate_zip():
             img_io = io.BytesIO()
             img.save(img_io, format="PNG", dpi=(72, 72))
             img_io.seek(0)
-            zf.writestr(f"zeus_ad_{item['num']:03d}.png", img_io.read())
+            zf.writestr(f"achilles_ad_{item['num']:03d}.png", img_io.read())
 
     zip_buffer.seek(0)
     return StreamingResponse(
         zip_buffer,
         media_type="application/zip",
-        headers={"Content-Disposition": "attachment; filename=zeus_protocol_100_ads.zip"}
+        headers={"Content-Disposition": "attachment; filename=achilles_protocol_100_ads.zip"}
     )
